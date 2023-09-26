@@ -1,4 +1,4 @@
-@import url(font-awesome.min.css);
+9@import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 /*
@@ -827,7 +827,7 @@ ol li {
 ul {
   list-style: disc;
   margin: 0 0 2rem 0;
-  padding-left: 1em;
+  padding: 1em;
 }
 
 ul li {
