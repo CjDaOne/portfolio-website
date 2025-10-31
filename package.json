@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-website",
+  "private": true,
+  "scripts": {
+    "dev": "npm run --prefix cjnf-react dev",
+    "build": "npm run --prefix cjnf-react build",
+    "lint": "npm run --prefix cjnf-react lint",
+    "preview": "npm run --prefix cjnf-react preview"
+  }
+}

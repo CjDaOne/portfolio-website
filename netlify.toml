@@ -1,6 +1,6 @@
 [build]
   # Build command
-  command = "cd cjnf-react && npm run build"
+  command = "npm run build"
 
   # Directory to publish (relative to root of repository)
   publish = "cjnf-react/dist"

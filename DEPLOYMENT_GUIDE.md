@@ -16,7 +16,7 @@ The CJNF SOLUTIONS website has been successfully transformed into a modern React
 The repository is already connected to Netlify. The site will automatically deploy when changes are pushed to the master branch.
 
 **Netlify Configuration:**
-- **Build Command**: `cd cjnf-react && npm run build`
+- **Build Command**: `npm run build`
 - **Publish Directory**: `cjnf-react/dist`
 - **Node Version**: 18 (specified in netlify.toml)
 - **Configuration File**: `netlify.toml` (includes redirects, headers, and optimizations)
@@ -39,7 +39,6 @@ For server-based deployment:
 
 ```bash
 # Build the project
-cd cjnf-react
 npm run build
 
 # Serve the dist folder with any web server
@@ -120,7 +119,7 @@ Add Google Analytics or similar tracking code to `index.html` before deployment:
 
 ### Content Updates
 - Edit components in `cjnf-react/src/components/`
-- Rebuild with `npm run build`
+- Rebuild with `npm run build` (from project root)
 - Deploy updated dist folder
 
 ### Feature Additions
