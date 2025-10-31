@@ -1,54 +1,58 @@
-# Build A Portfolio Website
+# Portfolio Website - CJNF Solutions
 
-With all of the projects you will be working on here at Lambda School, you will need somewhere to house them!  There is no better opportunity to learn and show off your skills than a beautiful portfolio website.  
+This is the portfolio website for Carl'averis Jackson, a Graphic Designer and Full Stack Web Developer specializing in composite photography, photo restoration, and web development.
 
-You have the ability to write HTML, CSS, and responsive media queries.  You also know how to identify and write responsive units.  It's time to put that knowledge into action by reading someone else's code and adding your own flavor.  You will be building a portfolio website from a template found on [https://html5up.net/](https://html5up.net/).
+## Features
 
-## Project Set Up
+- **Responsive Design**: Optimized for all devices using modern CSS techniques
+- **Modern UI**: Updated with gradients, animations, and interactive elements
+- **Accessibility**: WCAG compliant with proper ARIA labels and alt texts
+- **Performance**: Lazy loading images and optimized assets
+- **SEO**: Meta tags for search engine optimization
+- **Contact Form**: Client-side validation for user interaction
 
-### Follow these steps to set up and work on your project:
+## Technologies Used
 
-_ Watch this walk through video:  https://youtu.be/P2Y9W29kcjs
+- HTML5
+- CSS3 (with custom properties, flexbox, animations)
+- JavaScript (jQuery for interactions)
+- Font Awesome for icons
+- Google Fonts
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch on the clone: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on the `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+## Project Structure
 
-### Follow these steps to download your template and start the project:
+```
+/home/cjnf/portfolio-website/
+├── index.html          # Main HTML file
+├── assets/
+│   ├── css/
+│   │   ├── main.css    # Main stylesheet
+│   │   └── noscript.css # No-JS fallback
+│   └── js/
+│       ├── main.js     # Main JavaScript
+│       ├── browser.min.js
+│       ├── breakpoints.min.js
+│       └── util.js
+├── images/             # Portfolio images
+└── README.md           # This file
+```
 
-- [ ] Navigate here: [https://html5up.net/](https://html5up.net/)
-- [ ] You make pick any template you like.  Here are some good choices for a portfolio:
-	- [https://html5up.net/story](https://html5up.net/story)
-	- [https://html5up.net/solid-state](https://html5up.net/solid-state)
-	- [https://html5up.net/miniport](https://html5up.net/miniport)
-	- [https://html5up.net/dimension](https://html5up.net/dimension)
+## Development
 
-- [ ] Unzip the code and copy the site to your git repository that you just set up
-  * Note that we won't be utilizing the pre processed CSS structure, you can just ignore any folder with LESS or SASS (SCSS) in it.
-- [ ] Work on the MVP requirements listed below
+To run locally, open `index.html` in a web browser.
 
-### Follow these steps for completing your project after your MVP is completed:
+## Deployment
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into master (student's Repo). **Please don't merge your own pull request**
-- [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by merging the branch back into master.
+The site is ready for deployment to any static hosting service like GitHub Pages, Netlify, or Vercel.
 
-## MVP Requirements
+## Contact
 
-- [ ] Study the code base and identify both responsive units and where media queries were used.  Take notes on anything that confuses you or interesting things you find.  Share this information in your standup meeting with your group
-- [ ] Customize the template to you 
-	- [x] Update the title tag match your name
-	- [ ] Update the place holder content throughout the template to your information
-		* Some templates are much larger than others, you don't need to fill in every little div with information, just try to get the site representing you and your work 
-		* You can use sites like [https://www.pexels.com/](https://www.pexels.com/) for free images to fill in place holders
-		* Showcase projects you have worked on by providing some information and links to your git hub projects
-- [ ] Implement proper attribution: Attribution is required under the [creative commons license](https://html5up.net/license) that came with the website files you downloaded.  Be sure to provide attribution somewhere in the site.  The templates should already come with attribution found in most footers but double check to be sure.
-- [ ] Host your website for the world to see. Follow the instructions found here [https://pages.github.com/](https://pages.github.com/).  Once you have hosted your web page, share it for your peers to see.  This is not a small feat!
+Carl'averis Jackson  
+Email: [Your Email]  
+Website: cjnf-solutions.com  
+GitHub: [https://github.com/CjDaOne](https://github.com/CjDaOne)  
+Facebook: [i12tSolutions](https://facebook.com/i12tSolutions/)
 
-## Stretch
+## License
 
-- [ ] Study the JavaScript used in your template and see if you can tweak any of the behavior to see how it works
-- [ ] Download another template and see if you can get the CSS preprocessor working on the project
+This project is based on the HTML5UP Dimension template, licensed under CCA 3.0.
