@@ -12,11 +12,23 @@ The CJNF SOLUTIONS website has been successfully transformed into a modern React
 
 ## Deployment Options
 
-### Option 1: Static Hosting (Recommended)
-Deploy the `cjnf-react/dist/` folder to any static hosting service:
+### Current Setup: Netlify (Connected)
+The repository is already connected to Netlify. The site will automatically deploy when changes are pushed to the master branch.
+
+**Netlify Configuration:**
+- **Build Command**: `cd cjnf-react && npm run build`
+- **Publish Directory**: `cjnf-react/dist`
+- **Node Version**: Latest LTS
+
+**To trigger deployment:**
+1. Push changes to the `master` branch on GitHub
+2. Netlify will automatically detect changes and rebuild
+3. Visit your Netlify dashboard to monitor deployment status
+
+### Alternative Static Hosting Options
+If you need to switch hosting providers:
 
 - **GitHub Pages**: Upload dist contents to `gh-pages` branch
-- **Netlify**: Connect repository and set build command to `cd cjnf-react && npm run build`
 - **Vercel**: Import project and configure build settings
 - **AWS S3 + CloudFront**: Upload dist files to S3 bucket
 - **Firebase Hosting**: Use `firebase deploy` after setup
