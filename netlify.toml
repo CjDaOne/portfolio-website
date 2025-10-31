@@ -1,0 +1,78 @@
+[build]
+  # Build command
+  command = "cd cjnf-react && npm run build"
+
+  # Directory to publish (relative to root of repository)
+  publish = "cjnf-react/dist"
+
+  # Node version to use
+  environment = { NODE_VERSION = "18" }
+
+[build.environment]
+  # Build environment variables
+  NODE_VERSION = "18"
+
+# Redirect rules for SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# CSP (Content Security Policy) - adjust as needed
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com;"
+
+# HSTS (HTTP Strict Transport Security)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# Remove server header
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Powered-By = ""
+
+# Optimize for SEO and performance
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.html]
+  pretty_urls = true
+
+# Build hooks (optional)
+[build.hooks]
+  prebuild = "echo 'Starting build...'"
+
+# Plugins (if needed)
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
