@@ -1,6 +1,18 @@
-# Portfolio Website - CJNF Solutions
+# CJNF SOLUTIONS - Digital Consulting Firm Website
 
-This is the portfolio website for Carl'averis Jackson, a Graphic Designer and Full Stack Web Developer specializing in composite photography, photo restoration, and web development.
+This website represents CJNF SOLUTIONS, a digital consulting firm specializing in comprehensive web services including domain registration, web hosting, website development, email account setup, and ongoing website maintenance.
+
+## Business Overview
+
+CJNF SOLUTIONS empowers businesses with a robust online presence through affordable, reliable, and professional services. Our mission is to help businesses optimize operations, improve efficiency, and achieve strategic goals in the digital landscape.
+
+## Services Offered
+
+- **Domain Name Registration**: Annual registration to secure web presence
+- **Web Hosting**: Reliable hosting services for website availability
+- **Website Development**: Custom web design, development, and content creation
+- **Business Email Setup**: Professional email accounts linked to domains
+- **Website Maintenance**: Ongoing support for updates and functionality
 
 ## Features
 
@@ -34,6 +46,7 @@ This is the portfolio website for Carl'averis Jackson, a Graphic Designer and Fu
 │       ├── breakpoints.min.js
 │       └── util.js
 ├── images/             # Portfolio images
+├── TEAM_GUIDE.md       # Project management guide
 └── README.md           # This file
 ```
 
@@ -47,8 +60,8 @@ The site is ready for deployment to any static hosting service like GitHub Pages
 
 ## Contact
 
-Carl'averis Jackson  
-Email: [Your Email]  
+CJNF SOLUTIONS  
+Founded by Carl'averis Jackson  
 Website: cjnf-solutions.com  
 GitHub: [https://github.com/CjDaOne](https://github.com/CjDaOne)  
 Facebook: [i12tSolutions](https://facebook.com/i12tSolutions/)
