@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Portfolio: React.FC = () => {
+const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-4">
