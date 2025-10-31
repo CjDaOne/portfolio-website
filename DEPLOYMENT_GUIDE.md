@@ -18,7 +18,8 @@ The repository is already connected to Netlify. The site will automatically depl
 **Netlify Configuration:**
 - **Build Command**: `cd cjnf-react && npm run build`
 - **Publish Directory**: `cjnf-react/dist`
-- **Node Version**: Latest LTS
+- **Node Version**: 18 (specified in netlify.toml)
+- **Configuration File**: `netlify.toml` (includes redirects, headers, and optimizations)
 
 **To trigger deployment:**
 1. Push changes to the `master` branch on GitHub
