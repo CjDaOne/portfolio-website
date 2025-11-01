@@ -1,6 +1,12 @@
 # CJNF SOLUTIONS - Digital Consulting Firm Website
 
-This website represents CJNF SOLUTIONS, a digital consulting firm specializing in comprehensive web services including domain registration, web hosting, website development, email account setup, and ongoing website maintenance.
+Modern React-based website for CJNF SOLUTIONS, a digital consulting firm specializing in comprehensive web services including domain registration, web hosting, website development, email account setup, and ongoing website maintenance.
+
+## 🚀 Production Site
+
+The production website is built with **React 19 + TypeScript + Vite + Tailwind CSS** and located in the `/cjnf-react` directory.
+
+**Legacy HTML site** (root directory) is archived - see [LEGACY_README.md](LEGACY_README.md)
 
 ## Business Overview
 
@@ -25,38 +31,76 @@ CJNF SOLUTIONS empowers businesses with a robust online presence through afforda
 
 ## Technologies Used
 
-- HTML5
-- CSS3 (with custom properties, flexbox, animations)
-- JavaScript (jQuery for interactions)
-- Font Awesome for icons
-- Google Fonts
+**Production Stack:**
+- React 19
+- TypeScript
+- Vite 7
+- Tailwind CSS 3
+- Font Awesome
+- Netlify Forms
+
+**Testing:**
+- Vitest
+- React Testing Library
+- Jest DOM
+
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Development server
+npm run dev
+
+# Run tests
+npm run test
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
 
 ## Project Structure
 
 ```
 /home/cjnf/portfolio-website/
-├── index.html          # Main HTML file
-├── assets/
-│   ├── css/
-│   │   ├── main.css    # Main stylesheet
-│   │   └── noscript.css # No-JS fallback
-│   └── js/
-│       ├── main.js     # Main JavaScript
-│       ├── browser.min.js
-│       ├── breakpoints.min.js
-│       └── util.js
-├── images/             # Portfolio images
-├── TEAM_GUIDE.md       # Project management guide
-└── README.md           # This file
+├── cjnf-react/              # 🚀 PRODUCTION APP
+│   ├── src/
+│   │   ├── components/      # React components
+│   │   │   ├── Header.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   ├── Services.tsx
+│   │   │   ├── Portfolio.tsx
+│   │   │   ├── Contact.tsx   # Netlify Forms integration
+│   │   │   ├── Footer.tsx
+│   │   │   └── __tests__/    # Component tests
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   ├── public/
+│   ├── dist/                # Production build output
+│   ├── package.json
+│   ├── vite.config.ts
+│   ├── vitest.config.ts
+│   └── tailwind.config.js
+├── assets/                  # Legacy HTML assets (archived)
+├── images/                  # Shared images
+├── index.html               # Legacy HTML (archived)
+├── netlify.toml             # Deployment configuration
+├── DEPLOYMENT_GUIDE.md      # Deployment instructions
+├── TEAM_GUIDE.md            # Team management guide
+├── TRANSFORMATION_TASKS.md  # Migration tracking
+├── LEGACY_README.md         # Legacy site documentation
+└── README.md                # This file
 ```
-
-## Development
-
-To run locally, open `index.html` in a web browser.
 
 ## Deployment
 
-The site is ready for deployment to any static hosting service like GitHub Pages, Netlify, or Vercel.
+The site is configured for **Netlify** deployment with automatic builds from the main branch.
+
+See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for detailed deployment instructions.
 
 ## Contact
 
