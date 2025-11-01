@@ -6,12 +6,23 @@ const Hero = () => {
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">CJNF SOLUTIONS</h1>
             <h2 className="text-2xl md:text-3xl mb-6">Digital Consulting Firm</h2>
-            <p className="text-xl mb-8">
-              Empowering businesses with a robust online presence through affordable, reliable, and professional web services.
+            <p className="text-xl md:text-2xl mb-4 font-semibold text-blue-100">
+              Empowering Small to Medium-Sized Businesses Online
             </p>
-            <a href="#services" className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
-              Our Services
-            </a>
+            <p className="text-lg mb-8 leading-relaxed">
+              Your partner in building a powerful online presence. We deliver affordable, reliable web solutions with the personalized service your business deserves—from your first domain to ongoing success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <a href="#services" className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 text-center">
+                Explore Our Services
+              </a>
+              <a href="#contact" className="bg-white hover:bg-gray-100 text-blue-900 px-8 py-3 rounded-lg font-semibold transition duration-300 text-center">
+                Get Started Today
+              </a>
+            </div>
+            <p className="text-sm text-blue-200">
+              ✓ Transparent Pricing  ✓ No Hidden Fees  ✓ Personalized Support
+            </p>
           </div>
           <div className="md:w-1/2">
             <img

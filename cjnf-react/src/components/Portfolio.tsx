@@ -2,7 +2,40 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Portfolio</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">About CJNF SOLUTIONS</h2>
+        
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold mb-4 text-gray-800">Our Mission</h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Founded by Carl'averis Jackson, CJNF SOLUTIONS empowers businesses with a robust online presence through affordable, reliable, and professional web services. We are dedicated to helping small to medium-sized businesses across various industries thrive in the digital landscape.
+            </p>
+          </div>
+
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold mb-4 text-gray-800">What Sets Us Apart</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-lg mb-2 text-gray-800">Personalized Service</h4>
+                <p className="text-gray-700">Tailored solutions that align with your unique business goals and brand identity.</p>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-lg mb-2 text-gray-800">Comprehensive Packages</h4>
+                <p className="text-gray-700">Full-service offerings from design to deployment, ensuring a seamless experience.</p>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-lg mb-2 text-gray-800">Remote Flexibility</h4>
+                <p className="text-gray-700">Services delivered remotely for maximum convenience and accessibility.</p>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-lg mb-2 text-gray-800">Timely Delivery</h4>
+                <p className="text-gray-700">Professional project management tools ensure on-time, quality results.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-semibold text-center mb-8 text-gray-800">Our Work</h3>
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <img
             src="/images/DAJ0.jpg"
@@ -18,7 +51,7 @@ const Portfolio = () => {
           />
         </div>
         <p className="text-xl text-center mb-6 text-gray-600">
-          Explore our portfolio of web development projects, showcasing custom designs, responsive layouts, and innovative solutions for businesses. From e-commerce sites to corporate landing pages, we deliver quality and functionality.
+          Showcasing custom designs, responsive layouts, and innovative solutions for businesses. From e-commerce sites to corporate landing pages, we deliver quality and functionality.
         </p>
         <div className="text-center">
           <a
