@@ -1,22 +1,23 @@
-# Legacy HTML Site
+# Legacy HTML Site - REMOVED
 
-This directory contains the original static HTML version of the CJNF SOLUTIONS website. 
+## Status: ARCHIVED & REMOVED
 
-## Status: ARCHIVED
+The legacy HTML site has been **completely removed** from the repository to eliminate deployment confusion and streamline the codebase.
 
-The legacy site has been replaced by the modern React application located in `/cjnf-react`.
+## What Was Removed
+- ❌ `index.html` - Original HTML5UP Dimension template-based site
+- ❌ `assets/` - CSS, JavaScript, and other static assets (jQuery, SASS, etc.)
+- ❌ `images/` - Portfolio and profile images (duplicates)
+- ❌ `html5up-dimension.zip` - Original template archive
 
-## Contents
-- `index.html` - Original HTML5UP Dimension template-based site
-- `assets/` - CSS, JavaScript, and other static assets
-- `images/` - Portfolio and profile images
+## Why Removed
+- Caused confusion with Netlify deployment
+- All content migrated to React app
+- Images duplicated in `/cjnf-react/public/images`
+- No longer needed for any purpose
 
-## Purpose
-This legacy version is preserved for:
-- Historical reference
-- Fallback option if needed
-- Content migration verification
-- Template structure reference
+## All Assets Preserved
+All images and content have been migrated to the React application at `/cjnf-react/public/images`
 
 ## Migration
 All content and functionality from this legacy site has been migrated to the React application:

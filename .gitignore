@@ -1,0 +1,30 @@
+# Legacy files (archived - no longer needed)
+/assets/
+/images/
+index.html
+html5up-dimension.zip
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

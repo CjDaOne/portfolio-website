@@ -6,7 +6,7 @@ Modern React-based website for CJNF SOLUTIONS, a digital consulting firm special
 
 The production website is built with **React 19 + TypeScript + Vite + Tailwind CSS** and located in the `/cjnf-react` directory.
 
-**Legacy HTML site** (root directory) is archived - see [LEGACY_README.md](LEGACY_README.md)
+**Legacy HTML site has been removed** - see [LEGACY_README.md](LEGACY_README.md) for details. All content migrated to React app.
 
 ## Business Overview
 
@@ -101,9 +101,7 @@ npm run preview
 │   ├── vite.config.ts
 │   ├── vitest.config.ts
 │   └── tailwind.config.js
-├── assets/                        # Legacy HTML assets (archived)
-├── images/                        # Shared images
-├── index.html                     # Legacy HTML (archived)
+
 ├── netlify.toml                   # Deployment configuration
 ├── DEPLOYMENT_GUIDE.md            # Deployment instructions
 ├── PROJECT_STATUS.md              # Project completion report
@@ -128,6 +126,12 @@ See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for detailed deployment instructi
 - ✅ Enhanced all content for small-to-medium business targeting
 - ✅ Optimized SEO for SMB search terms
 - ✅ Updated all components with business plan information
+
+**October 31, 2025 - Codebase Cleanup:**
+- ✅ Removed all legacy HTML files (index.html, assets/, images/)
+- ✅ Eliminated deployment confusion with duplicate code
+- ✅ Streamlined repository to single React application
+- ✅ All assets preserved in `/cjnf-react/public/`
 
 See [BUSINESS_PLAN_INTEGRATION.md](BUSINESS_PLAN_INTEGRATION.md) for complete details.
 
