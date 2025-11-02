@@ -42,7 +42,7 @@ const Portfolio = () => {
         {/* LOWRY SASSY CREATIONZ */}
         <a href="https://frabjous-daffodil-a8243b.netlify.app/" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
         <div className="h-48 overflow-hidden">
-        <img src="/images/lowry-sassy-creationz.jpg" alt="LOWRY SASSY CREATIONZ project screenshot" className="w-full h-full object-cover" />
+        <img src="/images/lowry-sassy-creationz-screenshot.png" alt="LOWRY SASSY CREATIONZ project screenshot" className="w-full h-full object-cover" />
         </div>
         <div className="p-6">
         <h4 className="text-xl font-semibold mb-2 text-gray-800">LOWRY SASSY CREATIONZ</h4>
@@ -67,7 +67,7 @@ const Portfolio = () => {
         {/* Hardwicks Wood Candles */}
         <a href="https://hardwicks-wood-candles.netlify.app/" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
         <div className="h-48 overflow-hidden">
-        <img src="/images/hardwicks-wood-candles.jpg" alt="Hardwicks Wood Candles project screenshot" className="w-full h-full object-cover" />
+        <img src="/images/hardwicks-wood-candles-screenshot.png" alt="Hardwicks Wood Candles project screenshot" className="w-full h-full object-cover" />
         </div>
         <div className="p-6">
         <h4 className="text-xl font-semibold mb-2 text-gray-800">Hardwicks Wood Candles</h4>
@@ -117,7 +117,7 @@ const Portfolio = () => {
         {/* Serene Mind App */}
         <a href="https://serene-mind-app-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
         <div className="h-48 overflow-hidden">
-        <img src="/images/serene-mind-app.jpg" alt="Serene Mind App project screenshot" className="w-full h-full object-cover" />
+        <img src="/images/serene-mind-app-screenshot.png" alt="Serene Mind App project screenshot" className="w-full h-full object-cover" />
         </div>
         <div className="p-6">
         <h4 className="text-xl font-semibold mb-2 text-gray-800">Serene Mind App</h4>
