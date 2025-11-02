@@ -8,6 +8,19 @@
   # Directory to publish (relative to base)
   publish = "dist"
 
+# Force HTTPS redirect (must come before SPA redirect)
+[[redirects]]
+  from = "http://cjnfsolutions.online/*"
+  to = "https://cjnfsolutions.online/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.cjnfsolutions.online/*"
+  to = "https://cjnfsolutions.online/:splat"
+  status = 301
+  force = true
+
 # Redirect rules for SPA (Single Page Application)
 [[redirects]]
   from = "/*"
