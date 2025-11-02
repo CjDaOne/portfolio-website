@@ -1,12 +1,12 @@
 [build]
-  # Build command
-  command = "cd cjnf-react && npm run build"
+  # Build command - install deps in cjnf-react then build
+  command = "cd cjnf-react && npm install && npm run build"
 
   # Directory to publish (relative to root of repository)
   publish = "cjnf-react/dist"
 
-  # Node version to use
-  NODE_VERSION = "20"
+  # Base directory for build
+  base = "cjnf-react"
 
 # Redirect rules for SPA (Single Page Application)
 [[redirects]]
