@@ -6,10 +6,6 @@
   publish = "cjnf-react/dist"
 
   # Node version to use
-  environment = { NODE_VERSION = "18" }
-
-[build.environment]
-  # Build environment variables
   NODE_VERSION = "18"
 
 # Redirect rules for SPA (Single Page Application)
