@@ -40,7 +40,7 @@ const Portfolio = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {/* LOWRY SASSY CREATIONZ */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+        <a href="https://frabjous-daffodil-a8243b.netlify.app/" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
         <div className="h-48 overflow-hidden">
         <img src="/images/lowry-sassy-creationz.jpg" alt="LOWRY SASSY CREATIONZ project screenshot" className="w-full h-full object-cover" />
         </div>
@@ -54,18 +54,18 @@ const Portfolio = () => {
         <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Responsive</span>
         </div>
         <div className="flex space-x-3">
-        <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+        <span className="text-blue-600" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://github.com/CjDaOne?tab=repositories', '_blank'); }}>
         <i className="fab fa-github"></i> Code
-        </a>
-        <a href="https://share.google/NjrJz1CSSrGPcLpnF" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800">
+        </span>
+        <span className="text-green-600" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://frabjous-daffodil-a8243b.netlify.app/', '_blank'); }}>
         <i className="fas fa-external-link-alt"></i> Live Demo
+        </span>
+        </div>
+        </div>
         </a>
-        </div>
-        </div>
-        </div>
 
         {/* Hardwicks Wood Candles */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+        <a href="https://hardwicks-wood-candles.netlify.app/" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
         <div className="h-48 overflow-hidden">
         <img src="/images/hardwicks-wood-candles.jpg" alt="Hardwicks Wood Candles project screenshot" className="w-full h-full object-cover" />
         </div>
@@ -79,18 +79,18 @@ const Portfolio = () => {
         <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Netlify</span>
         </div>
         <div className="flex space-x-3">
-        <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+        <span className="text-blue-600" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://github.com/CjDaOne?tab=repositories', '_blank'); }}>
         <i className="fab fa-github"></i> Code
-        </a>
-        <a href="https://hardwicks-wood-candles.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800">
+        </span>
+        <span className="text-green-600" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://hardwicks-wood-candles.netlify.app/', '_blank'); }}>
         <i className="fas fa-external-link-alt"></i> Live Demo
+        </span>
+        </div>
+        </div>
         </a>
-        </div>
-        </div>
-        </div>
 
         {/* CJNF SOLUTIONS */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+        <a href="https://cjnfsolutions.online/" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
         <div className="h-48 overflow-hidden">
         <img src="/images/cjnf-solutions.jpg" alt="CJNF SOLUTIONS project screenshot" className="w-full h-full object-cover" />
         </div>
@@ -104,18 +104,18 @@ const Portfolio = () => {
         <span className="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">Tailwind</span>
         </div>
         <div className="flex space-x-3">
-        <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+        <span className="text-blue-600" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://github.com/CjDaOne?tab=repositories', '_blank'); }}>
         <i className="fab fa-github"></i> Code
-        </a>
-        <a href="https://cjnfsolutions.online/#" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800">
+        </span>
+        <span className="text-green-600" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://cjnfsolutions.online/', '_blank'); }}>
         <i className="fas fa-external-link-alt"></i> Live Demo
+        </span>
+        </div>
+        </div>
         </a>
-        </div>
-        </div>
-        </div>
 
         {/* Serene Mind App */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+        <a href="https://serene-mind-app-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
         <div className="h-48 overflow-hidden">
         <img src="/images/serene-mind-app.jpg" alt="Serene Mind App project screenshot" className="w-full h-full object-cover" />
         </div>
@@ -129,15 +129,15 @@ const Portfolio = () => {
         <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">React 19</span>
         </div>
         <div className="flex space-x-3">
-        <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+        <span className="text-blue-600" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://github.com/CjDaOne?tab=repositories', '_blank'); }}>
         <i className="fab fa-github"></i> Code
-        </a>
-        <a href="https://serenemindapp.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800">
+        </span>
+        <span className="text-green-600" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://serene-mind-app-two.vercel.app/', '_blank'); }}>
         <i className="fas fa-external-link-alt"></i> Live Demo
+        </span>
+        </div>
+        </div>
         </a>
-        </div>
-        </div>
-        </div>
         </div>
 
         <div className="text-center mb-8">
