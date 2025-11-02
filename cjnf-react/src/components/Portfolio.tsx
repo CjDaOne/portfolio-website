@@ -39,155 +39,105 @@ const Portfolio = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {/* E-commerce Platform */}
+        {/* LOWRY SASSY CREATIONZ */}
         <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-        <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-            <i className="fas fa-shopping-cart text-4xl text-white"></i>
-          </div>
+        <div className="h-48 overflow-hidden">
+        <img src="/images/lowry-sassy-creationz.jpg" alt="LOWRY SASSY CREATIONZ project screenshot" className="w-full h-full object-cover" />
+        </div>
         <div className="p-6">
-          <h4 className="text-xl font-semibold mb-2 text-gray-800">E-commerce Platform</h4>
-          <p className="text-gray-600 mb-4">Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.</p>
-          <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React</span>
-                <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Node.js</span>
-                <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">MongoDB</span>
-              <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Stripe</span>
-              </div>
-              <div className="flex space-x-3">
-              <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-              <i className="fab fa-github"></i> Code
-            </a>
-            <a href="#" className="text-green-600 hover:text-green-800">
-              <i className="fas fa-external-link-alt"></i> Live Demo
-              </a>
-          </div>
-          </div>
-          </div>
+        <h4 className="text-xl font-semibold mb-2 text-gray-800">LOWRY SASSY CREATIONZ</h4>
+        <p className="text-gray-600 mb-4">A custom product catalog and booking site for a boutique brand, showcasing fashion products with an elegant design.</p>
+        <div className="flex flex-wrap gap-2 mb-4">
+        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React</span>
+        <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">CSS3</span>
+        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">JavaScript</span>
+        <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Responsive</span>
+        </div>
+        <div className="flex space-x-3">
+        <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+        <i className="fab fa-github"></i> Code
+        </a>
+        <a href="https://share.google/NjrJz1CSSrGPcLpnF" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800">
+        <i className="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        </div>
+        </div>
+        </div>
 
-          {/* Task Management App */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-            <div className="h-48 bg-gradient-to-r from-green-500 to-teal-600 flex items-center justify-center">
-              <i className="fas fa-tasks text-4xl text-white"></i>
-            </div>
-            <div className="p-6">
-              <h4 className="text-xl font-semibold mb-2 text-gray-800">Task Management App</h4>
-              <p className="text-gray-600 mb-4">Collaborative project management tool with real-time updates, team collaboration, and progress tracking.</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Vue.js</span>
-                <span className="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">Firebase</span>
-                <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Tailwind</span>
-                <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Socket.io</span>
-              </div>
-              <div className="flex space-x-3">
-                <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                  <i className="fab fa-github"></i> Code
-                </a>
-                <a href="#" className="text-green-600 hover:text-green-800">
-                  <i className="fas fa-external-link-alt"></i> Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
+        {/* Hardwicks Wood Candles */}
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+        <div className="h-48 overflow-hidden">
+        <img src="/images/hardwicks-wood-candles.jpg" alt="Hardwicks Wood Candles project screenshot" className="w-full h-full object-cover" />
+        </div>
+        <div className="p-6">
+        <h4 className="text-xl font-semibold mb-2 text-gray-800">Hardwicks Wood Candles</h4>
+        <p className="text-gray-600 mb-4">E-commerce-ready product showcase built for a handmade candle shop, featuring beautiful wood-scented products.</p>
+        <div className="flex flex-wrap gap-2 mb-4">
+        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">HTML5</span>
+        <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">CSS3</span>
+        <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">JavaScript</span>
+        <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Netlify</span>
+        </div>
+        <div className="flex space-x-3">
+        <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+        <i className="fab fa-github"></i> Code
+        </a>
+        <a href="https://hardwicks-wood-candles.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800">
+        <i className="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        </div>
+        </div>
+        </div>
 
-          {/* Restaurant Website */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-            <div className="h-48 bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center">
-              <i className="fas fa-utensils text-4xl text-white"></i>
-            </div>
-            <div className="p-6">
-              <h4 className="text-xl font-semibold mb-2 text-gray-800">Restaurant Website</h4>
-              <p className="text-gray-600 mb-4">Modern restaurant website with online ordering, menu management, and customer reservation system.</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Next.js</span>
-                <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">PostgreSQL</span>
-                <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Prisma</span>
-                <span className="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">Stripe</span>
-              </div>
-              <div className="flex space-x-3">
-                <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                  <i className="fab fa-github"></i> Code
-                </a>
-                <a href="#" className="text-green-600 hover:text-green-800">
-                  <i className="fas fa-external-link-alt"></i> Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
+        {/* CJNF SOLUTIONS */}
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+        <div className="h-48 overflow-hidden">
+        <img src="/images/cjnf-solutions.jpg" alt="CJNF SOLUTIONS project screenshot" className="w-full h-full object-cover" />
+        </div>
+        <div className="p-6">
+        <h4 className="text-xl font-semibold mb-2 text-gray-800">CJNF SOLUTIONS</h4>
+        <p className="text-gray-600 mb-4">In-progress developer networking tool to find and match with collaborators, built with modern web technologies.</p>
+        <div className="flex flex-wrap gap-2 mb-4">
+        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React</span>
+        <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">TypeScript</span>
+        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Vite</span>
+        <span className="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">Tailwind</span>
+        </div>
+        <div className="flex space-x-3">
+        <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+        <i className="fab fa-github"></i> Code
+        </a>
+        <a href="https://cjnfsolutions.online/#" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800">
+        <i className="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        </div>
+        </div>
+        </div>
 
-          {/* Real Estate Platform */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-            <div className="h-48 bg-gradient-to-r from-indigo-500 to-blue-600 flex items-center justify-center">
-              <i className="fas fa-home text-4xl text-white"></i>
-            </div>
-            <div className="p-6">
-              <h4 className="text-xl font-semibold mb-2 text-gray-800">Real Estate Platform</h4>
-              <p className="text-gray-600 mb-4">Property listing platform with advanced search, virtual tours, and agent management system.</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React</span>
-                <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Express</span>
-                <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">MongoDB</span>
-                <span className="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">Mapbox</span>
-              </div>
-              <div className="flex space-x-3">
-                <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                  <i className="fab fa-github"></i> Code
-                </a>
-                <a href="#" className="text-green-600 hover:text-green-800">
-                  <i className="fas fa-external-link-alt"></i> Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Educational Platform */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-            <div className="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
-              <i className="fas fa-graduation-cap text-4xl text-white"></i>
-            </div>
-            <div className="p-6">
-              <h4 className="text-xl font-semibold mb-2 text-gray-800">Educational Platform</h4>
-              <p className="text-gray-600 mb-4">Online learning management system with course creation, student progress tracking, and interactive content.</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Angular</span>
-                <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Django</span>
-                <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">PostgreSQL</span>
-                <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">AWS</span>
-              </div>
-              <div className="flex space-x-3">
-                <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                  <i className="fab fa-github"></i> Code
-                </a>
-                <a href="#" className="text-green-600 hover:text-green-800">
-                  <i className="fas fa-external-link-alt"></i> Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Social Media Dashboard */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-            <div className="h-48 bg-gradient-to-r from-pink-500 to-red-600 flex items-center justify-center">
-              <i className="fas fa-chart-line text-4xl text-white"></i>
-            </div>
-            <div className="p-6">
-              <h4 className="text-xl font-semibold mb-2 text-gray-800">Social Media Dashboard</h4>
-              <p className="text-gray-600 mb-4">Analytics dashboard for social media management with automated posting, engagement tracking, and reporting.</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Vue.js</span>
-                <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-sm">TypeScript</span>
-                <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Chart.js</span>
-                <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">Python</span>
-              </div>
-              <div className="flex space-x-3">
-                <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                  <i className="fab fa-github"></i> Code
-                </a>
-                <a href="#" className="text-green-600 hover:text-green-800">
-                  <i className="fas fa-external-link-alt"></i> Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
+        {/* Serene Mind App */}
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+        <div className="h-48 overflow-hidden">
+        <img src="/images/serene-mind-app.jpg" alt="Serene Mind App project screenshot" className="w-full h-full object-cover" />
+        </div>
+        <div className="p-6">
+        <h4 className="text-xl font-semibold mb-2 text-gray-800">Serene Mind App</h4>
+        <p className="text-gray-600 mb-4">A full-stack PWA for mental wellness with AI-powered journaling, mood tracking, and offline-first architecture.</p>
+        <div className="flex flex-wrap gap-2 mb-4">
+        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Next.js 15</span>
+        <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Google Gemini</span>
+        <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">PWA</span>
+        <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">React 19</span>
+        </div>
+        <div className="flex space-x-3">
+        <a href="https://github.com/CjDaOne?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+        <i className="fab fa-github"></i> Code
+        </a>
+        <a href="https://serenemindapp.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800">
+        <i className="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        </div>
+        </div>
+        </div>
         </div>
 
         <div className="text-center mb-8">
