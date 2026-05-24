@@ -3,21 +3,39 @@ import Hero from './components/Hero';
 import Trust from './components/Trust';
 import Services from './components/Services';
 import Pricing from './components/Pricing';
-import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white text-gray-900">
+      
       <Header />
-      <Hero />
-      <Trust />
-      <Services />
-      <Pricing />
-      <Portfolio />
-      <Contact />
+
+      <main>
+
+        <Hero />
+
+        <section id="trust">
+          <Trust />
+        </section>
+
+        <section id="services">
+          <Services />
+        </section>
+
+        <section id="pricing">
+          <Pricing />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+
+      </main>
+
       <Footer />
+
     </div>
   );
 }
