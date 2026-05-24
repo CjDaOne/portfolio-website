@@ -1,73 +1,71 @@
 const Pricing = () => {
-  const packages = [
+  const services = [
     {
-      name: "Starter Package",
-      description: "Perfect for individuals and small businesses getting started online",
-      price: "$1,496",
-      period: "first year",
+      name: "Discovery Session",
+      description: "Understand your needs and identify the right systems for your business or workflow",
+      price: "$75",
+      period: "per session",
       popular: false,
       features: [
-        "Domain Registration ($40/year)",
-        "Web Hosting ($240/year)",
-        "Website Development ($1,000)",
-        "Basic Support"
+        "30–60 minute consultation",
+        "Workflow or business analysis",
+        "System recommendations",
+        "Next-step roadmap"
       ],
-      cta: "Get Started"
+      cta: "Book Session"
     },
     {
-      name: "Business Package",
-      description: "Ideal for growing businesses needing professional presence",
-      price: "$2,696",
-      period: "first year",
+      name: "System Build Package",
+      description: "Custom-built digital systems for productivity, operations, or online presence",
+      price: "From $1,000",
+      period: "project-based",
       popular: true,
       features: [
-        "Domain Registration ($40/year)",
-        "Web Hosting ($240/year)",
-        "Website Development ($1,000)",
-        "Business Email Setup ($216/year)",
-        "3 Months Website Maintenance ($300)",
-        "Priority Support"
+        "Custom web or workflow system",
+        "Task / process automation setup",
+        "User-focused design",
+        "Deployment & configuration",
+        "Initial support period"
       ],
-      cta: "Most Popular"
+      cta: "Start Build"
     },
     {
-      name: "Enterprise Package",
-      description: "Complete solution for established businesses",
-      price: "$3,896",
-      period: "first year",
+      name: "Ongoing Support",
+      description: "Maintenance, updates, and continued system optimization",
+      price: "$100",
+      period: "monthly starting",
       popular: false,
       features: [
-        "Domain Registration ($40/year)",
-        "Web Hosting ($240/year)",
-        "Website Development ($1,000)",
-        "Business Email Setup ($216/year)",
-        "12 Months Website Maintenance ($1,200)",
-        "Advanced Security Features",
-        "24/7 Premium Support"
+        "System maintenance",
+        "Feature updates",
+        "Bug fixes & improvements",
+        "Priority support access"
       ],
-      cta: "Contact Us"
+      cta: "Get Support"
     }
   ];
 
   const handleCTA = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+    const appointmentPage = document.getElementById('appointments');
+    if (appointmentPage) {
+      appointmentPage.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <section id="pricing" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="container mx-auto px-4">
+        
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-          Service Packages
+          Services & Engagements
         </h2>
+
         <p className="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
-          Choose the perfect package for your business. All packages include our commitment to quality and reliability.
+          Structured services designed to help you build better systems, improve productivity, and streamline operations.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {packages.map((pkg, index) => (
+          {services.map((pkg, index) => (
             <div
               key={index}
               className={`bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 ${
@@ -76,17 +74,26 @@ const Pricing = () => {
             >
               {pkg.popular && (
                 <div className="bg-red-500 text-white text-center py-2 font-semibold text-sm">
-                  MOST POPULAR
+                  RECOMMENDED STARTING POINT
                 </div>
               )}
-              
+
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-2 text-blue-900">{pkg.name}</h3>
-                <p className="text-gray-600 mb-6 min-h-[3rem]">{pkg.description}</p>
-                
+                <h3 className="text-2xl font-bold mb-2 text-blue-900">
+                  {pkg.name}
+                </h3>
+
+                <p className="text-gray-600 mb-6 min-h-[3rem]">
+                  {pkg.description}
+                </p>
+
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-gray-800">{pkg.price}</span>
-                  <span className="text-gray-600 ml-2">/ {pkg.period}</span>
+                  <span className="text-3xl font-bold text-gray-800">
+                    {pkg.price}
+                  </span>
+                  <span className="text-gray-600 ml-2">
+                    / {pkg.period}
+                  </span>
                 </div>
 
                 <ul className="mb-8 space-y-3">
@@ -126,14 +133,27 @@ const Pricing = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-4 text-gray-800">À La Carte Services</h3>
-          <p className="text-gray-600 mb-6">Need individual services? We offer flexible pricing:</p>
+          <h3 className="text-2xl font-bold mb-4 text-gray-800">
+            Flexible Engagement Options
+          </h3>
+
+          <p className="text-gray-600 mb-6">
+            Services are customized based on your needs after an initial consultation.
+          </p>
+
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            <span className="bg-white px-4 py-2 rounded-lg shadow">Domain: $40/year</span>
-            <span className="bg-white px-4 py-2 rounded-lg shadow">Hosting: $240/year</span>
-            <span className="bg-white px-4 py-2 rounded-lg shadow">Development: $1,000</span>
-            <span className="bg-white px-4 py-2 rounded-lg shadow">Email: $216/year</span>
-            <span className="bg-white px-4 py-2 rounded-lg shadow">Maintenance: $100/month</span>
+            <span className="bg-white px-4 py-2 rounded-lg shadow">
+              Workflow Design
+            </span>
+            <span className="bg-white px-4 py-2 rounded-lg shadow">
+              Productivity Systems
+            </span>
+            <span className="bg-white px-4 py-2 rounded-lg shadow">
+              Custom Software
+            </span>
+            <span className="bg-white px-4 py-2 rounded-lg shadow">
+              System Maintenance
+            </span>
           </div>
         </div>
       </div>
