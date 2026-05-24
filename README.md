@@ -210,6 +210,4 @@ License
 Based on HTML5UP Dimension template (CCA 3.0), extended and adapted for CJNF SOLUTIONS system platform.
 
 
----
 
-If you want next step, I can tighten this into a pitch-ready one-pager (investor / client facing) or a “SereneMind ecosystem” architecture doc that connects everything you’re building into one roadmap.
