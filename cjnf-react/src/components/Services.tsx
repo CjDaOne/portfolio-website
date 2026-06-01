@@ -1,6 +1,7 @@
 const Services = () => {
   const services = [
     {
+      icon: "fa-search",
       title: "Discovery & Systems Consultation",
       price: "Starting at $75",
       description:
@@ -12,21 +13,24 @@ const Services = () => {
       ],
     },
     {
-      title: "Custom Software & Workflow Systems",
-      price: "Project-based pricing",
+      icon: "fa-code",
+      title: "Custom Software & Web Applications",
+      price: "From $1,000 — project-based",
       description:
         "Bespoke digital systems designed to improve productivity, organization, and operational efficiency for individuals and businesses.",
       features: [
         "Custom web applications",
         "Task and workflow systems",
         "Productivity-focused design",
+        "Deployment & configuration",
       ],
     },
     {
+      icon: "fa-brain",
       title: "Productivity & Wellness Platform Development",
       price: "Included in project scope",
       description:
-        "Development of structured tools that support focus, routine building, and functional recovery through digital systems and thoughtful UX design.",
+        "Structured tools that support focus, routine building, and functional recovery through digital systems and thoughtful UX design.",
       features: [
         "Task management systems",
         "Routine and habit structures",
@@ -34,6 +38,7 @@ const Services = () => {
       ],
     },
     {
+      icon: "fa-wrench",
       title: "System Maintenance & Optimization",
       price: "From $100/month",
       description:
@@ -42,13 +47,15 @@ const Services = () => {
         "Bug fixes and updates",
         "Performance improvements",
         "Feature enhancements",
+        "Priority support access",
       ],
     },
     {
+      icon: "fa-server",
       title: "Digital Infrastructure Setup",
       price: "Included when required",
       description:
-        "Technical setup required to support your systems, including deployment, hosting configuration, and foundational digital infrastructure.",
+        "Technical setup required to support your systems — deployment, hosting configuration, and foundational digital infrastructure.",
       features: [
         "Deployment setup",
         "Hosting configuration",
@@ -64,7 +71,7 @@ const Services = () => {
           Systems & Services
         </h2>
 
-        <p className="text-xl text-center mb-12 text-gray-700 max-w-3xl mx-auto">
+        <p className="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
           We design and build structured digital systems that improve productivity,
           organization, and long-term operational clarity.
         </p>
@@ -73,27 +80,29 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 border-t-4 border-blue-900"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 border-t-4 border-blue-900 flex flex-col"
             >
-              <h3 className="text-xl font-semibold mb-2 text-blue-900">
-                {service.title}
-              </h3>
+              <div className="flex items-center gap-3 mb-3">
+                <span className="bg-blue-100 text-blue-900 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                  <i className={`fas ${service.icon}`}></i>
+                </span>
+                <h3 className="text-lg font-semibold text-blue-900 leading-tight">
+                  {service.title}
+                </h3>
+              </div>
 
-              <p className="text-red-500 font-bold text-xl mb-4">
+              <p className="text-red-500 font-bold text-lg mb-3">
                 {service.price}
               </p>
 
-              <p className="text-gray-700 mb-4 leading-relaxed">
+              <p className="text-gray-700 mb-4 leading-relaxed text-sm flex-grow">
                 {service.description}
               </p>
 
-              <ul className="space-y-2">
+              <ul className="space-y-2 mt-auto">
                 {service.features.map((feature, idx) => (
-                  <li
-                    key={idx}
-                    className="text-sm text-gray-600 flex items-start"
-                  >
-                    <span className="text-green-500 mr-2">✓</span>
+                  <li key={idx} className="text-sm text-gray-600 flex items-start">
+                    <span className="text-green-500 mr-2 mt-0.5">✓</span>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -102,39 +111,13 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-blue-50 rounded-lg p-8 text-center border-l-4 border-blue-900">
-          <h3 className="text-2xl font-bold mb-4 text-gray-800">
-            Why Work With CJNF Solutions?
-          </h3>
-
-          <div className="grid md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto">
-            <div>
-              <h4 className="font-semibold text-blue-900 mb-2">
-                Systems-Focused Approach
-              </h4>
-              <p className="text-gray-700">
-                We focus on how your workflows, tools, and processes actually function—not just how they look.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-blue-900 mb-2">
-                Structured Engagement Model
-              </h4>
-              <p className="text-gray-700">
-                Work begins with consultation and evolves into clearly scoped, outcome-driven systems.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-blue-900 mb-2">
-                Scalable Digital Solutions
-              </h4>
-              <p className="text-gray-700">
-                Built to grow with you—whether you're an individual improving focus or an organization scaling operations.
-              </p>
-            </div>
-          </div>
+        <div className="mt-12 text-center">
+          <a
+            href="#contact"
+            className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 inline-block"
+          >
+            Discuss Your Project
+          </a>
         </div>
       </div>
     </section>
