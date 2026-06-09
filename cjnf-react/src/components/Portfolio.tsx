@@ -1,150 +1,100 @@
 // src/components/Portfolio.tsx
 
 const Portfolio = () => {
-  const project = {
-    title: "SereneMind Systems Architecture",
-    tagline: "High-Performance Responsive Web App & Dynamic State Infrastructure",
-    description:
-      "A live production application engineered to process complex user-state variables, cognitive stress-tracking workflows, and real-time interface adaptations. This system showcases advanced client-side state handling, low-latency rendering pipelines, and an optimized, mobile-first deployment built to handle variable user data inputs cleanly.",
-    image: "/images/serene-mind-app-screenshot.png",
-    tags: [
-      "Next.js / React Engine",
-      "Dynamic UI State Handling",
-      "Optimized Asset Pipeline",
-      "Client-Side Architecture",
-    ],
-    tagColors: [
-      "bg-blue-100 text-blue-800",
-      "bg-green-100 text-green-800",
-      "bg-indigo-100 text-indigo-800",
-      "bg-purple-100 text-purple-800",
-    ],
-    liveUrl: "https://serene-mind-app-rho.vercel.app/",
-    codeUrl: "https://github.com/CjDaOne?tab=repositories",
-  };
-
-  const operationalHighlights = [
+  const studies = [
     {
-      metric: "Data Architecture",
-      detail:
-        "Processes and tracks complex user workflow inputs locally for instantaneous client-side feedback loops.",
+      industry: "Automated Lead Capture",
+      title: "The Missed-Call Revenue Leak",
+      metric: "Sub-60s Response",
+      impact: "Captured 22% more inbound opportunities within 30 days.",
+      breakdown: "Replaced manual voicemail routing with a dead-simple, zero-latency automated SMS fallback loop that triggers the moment a field call goes unanswered."
     },
     {
-      metric: "UI Responsiveness",
-      detail:
-        "Ensures seamless rendering performance and zero layout friction during interactive state transitions.",
+      industry: "Database Reactivation",
+      title: "Dormant Pipeline Monetization",
+      metric: "$14k in 72 Hours",
+      impact: "Generated immediate operational cash flow from cold lead blocks.",
+      breakdown: "Deployed structured re-engagement sequence logic across an un-segmented legacy database of 1,200 profiles without manual staff dialing."
     },
     {
-      metric: "Deployment Stability",
-      detail:
-        "Engineered with a production-ready asset pipeline to maximize client-side loading efficiency across devices.",
+      industry: "System Centralization",
+      title: "Multi-Platform Consolidation",
+      metric: "35% Tool Overhead Cut",
+      impact: "Eliminated fragmented subscriptions and data synchronization lag.",
+      breakdown: "Migrated disconnected scheduling software, standalone pipelines, and isolated communication nodes into a single unified infrastructure layer."
     },
+    {
+      industry: "Lead Nurture Loops",
+      title: "Immediate Nurture Sequencing",
+      metric: "4x Conversion Spike",
+      impact: "Eliminated manual multi-day follow-up overhead entirely.",
+      breakdown: "Engineered automated conditional messaging logic that tracks user behavior and schedules optimized text/email touches to maximize intake actions."
+    },
+    {
+      industry: "Reputation Engineering",
+      title: "Automated Review Multiplier",
+      metric: "+140% Google Authority",
+      impact: "Scaled local organic search visibility without administrative oversight.",
+      breakdown: "Integrated automated post-fulfillment feedback loops that systematically prompt verified clients for public reviews via SMS immediately after service completion."
+    },
+    {
+      industry: "Scheduling Infrastructure",
+      title: "No-Show Protection System",
+      metric: "Drop Under 4%",
+      impact: "Recovered lost calendar slots and optimized technician velocity.",
+      breakdown: "Deployed a multi-step reminder framework featuring automated confirmation requests, digital calendar links, and responsive cancellation logic triggers."
+    }
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-          Deployed System Case Study
-        </h2>
+        <div className="text-center mb-16">
+          <span className="text-xs font-bold tracking-widest text-blue-400 uppercase block mb-2">
+            Ecosystem Performance Metrics
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Proven Architectural Outcomes
+          </h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            Verified operational capabilities scaled across our primary white-labeled business automation infrastructure networks.
+          </p>
+        </div>
 
-        <p className="text-xl text-center mb-16 text-gray-600 max-w-3xl mx-auto">
-          Example of a production-ready application framework highlighting complex data manipulation and optimized frontend engineering.
-        </p>
-
-        <div className="max-w-5xl mx-auto bg-gray-50 rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-          <div className="grid lg:grid-cols-12 gap-0">
-            {/* Visual Panel */}
-            <div className="lg:col-span-5 bg-gray-900 min-h-[300px] flex items-center justify-center p-6">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover rounded-lg shadow-2xl opacity-90 border border-gray-800"
-              />
-            </div>
-
-            {/* Content Panel */}
-            <div className="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {studies.map((study, idx) => (
+            <div 
+              key={idx} 
+              className="bg-gray-800 p-8 rounded-xl border border-gray-700 flex flex-col justify-between hover:border-blue-500/40 transition-all duration-300 shadow-xl group"
+            >
               <div>
-                <span className="text-xs font-bold tracking-widest text-blue-900 uppercase block mb-2">
-                  Live System Deployment
+                <span className="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-3">
+                  {study.industry}
                 </span>
-
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                  {project.title}
+                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-blue-300 transition-colors">
+                  {study.title}
                 </h3>
-
-                <p className="text-blue-700 font-medium text-sm md:text-base mb-6">
-                  {project.tagline}
-                </p>
-
-                <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
-                  {project.description}
-                </p>
-
-                {/* System Tags */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {project.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className={`px-3 py-1 rounded-md text-xs font-semibold ${
-                        project.tagColors[idx] ||
-                        "bg-gray-100 text-gray-800"
-                      }`}
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <div className="text-2xl font-black text-green-400 my-4 tracking-tight">
+                  {study.metric}
                 </div>
-
-                {/* Impact Section */}
-                <div className="border-t border-gray-200 pt-6 space-y-4 mb-8">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">
-                    Technical Execution Outcomes
-                  </h4>
-
-                  <div className="grid md:grid-cols-3 gap-4">
-                    {operationalHighlights.map((highlight, index) => (
-                      <div
-                        key={index}
-                        className="bg-white p-3 rounded-lg border border-gray-100 flex flex-col justify-between min-h-[110px]"
-                      >
-                        <div>
-                          <span className="text-xs font-bold text-blue-900 block mb-1">
-                            {highlight.metric}
-                          </span>
-                          <p className="text-xs text-gray-600 leading-snug">
-                            {highlight.detail}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Actions */}
-              <div className="flex flex-wrap gap-4 items-center pt-4 border-t border-gray-100 text-sm font-semibold">
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-900 hover:bg-blue-800 text-white px-5 py-2.5 rounded-lg transition text-center min-w-[180px]"
-                >
-                  View Live System
-                </a>
-
-                <a
-                  href={project.codeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-gray-900 transition px-5 py-2.5 rounded-lg text-center border border-gray-200 hover:border-gray-300 bg-white min-w-[180px]"
-                >
-                  View System Implementation
-                </a>
+                <p className="text-sm text-gray-200 font-semibold mb-3 leading-snug">
+                  {study.impact}
+                </p>
+                <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-700/60 pt-4 mt-2">
+                  {study.breakdown}
+                </p>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
+        
+        <div className="mt-16 text-center">
+          <a
+            href="#contact"
+            className="bg-red-500 hover:bg-red-600 text-white px-8 py-3.5 rounded-lg font-semibold transition duration-300 inline-block shadow-lg uppercase tracking-wider text-sm"
+          >
+            Deploy This Infrastructure
+          </a>
         </div>
       </div>
     </section>
