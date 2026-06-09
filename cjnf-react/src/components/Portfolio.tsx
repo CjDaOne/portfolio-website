@@ -2,16 +2,16 @@
 
 const Portfolio = () => {
   const project = {
-    title: "SereneMind Care Operations System",
-    tagline: "Deployed Care Workflow & Automation Infrastructure",
+    title: "SereneMind Systems Architecture",
+    tagline: "High-Performance Responsive Web App & Dynamic State Infrastructure",
     description:
-      "A deployed operational system designed to replace fragmented intake processes, manual documentation, and disconnected client tracking. Built to centralize communication, automate administrative workflows, and improve reliability across service environments.",
+      "A live production application engineered to process complex user-state variables, cognitive stress-tracking workflows, and real-time interface adaptations. This system showcases advanced client-side state handling, low-latency rendering pipelines, and an optimized, mobile-first deployment built to handle variable user data inputs cleanly.",
     image: "/images/serene-mind-app-screenshot.png",
     tags: [
-      "Workflow Automation System",
-      "Secure Data Handling",
-      "Offline-Resilient Design",
-      "Intake & Scheduling Automation",
+      "Next.js / React Engine",
+      "Dynamic UI State Handling",
+      "Optimized Asset Pipeline",
+      "Client-Side Architecture",
     ],
     tagColors: [
       "bg-blue-100 text-blue-800",
@@ -19,25 +19,25 @@ const Portfolio = () => {
       "bg-indigo-100 text-indigo-800",
       "bg-purple-100 text-purple-800",
     ],
-    liveUrl: "https://serene-mind-app-two.vercel.app/",
+    liveUrl: "https://serene-mind-app-rho.vercel.app/",
     codeUrl: "https://github.com/CjDaOne?tab=repositories",
   };
 
   const operationalHighlights = [
     {
-      metric: "Administrative Load",
+      metric: "Data Architecture",
       detail:
-        "Automates intake tracking, documentation flow, and client routing to reduce manual administrative work.",
+        "Processes and tracks complex user workflow inputs locally for instantaneous client-side feedback loops.",
     },
     {
-      metric: "Operational Reliability",
+      metric: "UI Responsiveness",
       detail:
-        "Maintains consistent system performance across concurrent users and high-frequency workflow activity.",
+        "Ensures seamless rendering performance and zero layout friction during interactive state transitions.",
     },
     {
-      metric: "Workflow Continuity",
+      metric: "Deployment Stability",
       detail:
-        "Preserves active sessions and workflow state during connectivity interruptions to prevent lost progress or data.",
+        "Engineered with a production-ready asset pipeline to maximize client-side loading efficiency across devices.",
     },
   ];
 
@@ -49,8 +49,7 @@ const Portfolio = () => {
         </h2>
 
         <p className="text-xl text-center mb-16 text-gray-600 max-w-3xl mx-auto">
-          Example of a production-ready operational system designed to replace
-          manual workflows with automated, structured business processes.
+          Example of a production-ready application framework highlighting complex data manipulation and optimized frontend engineering.
         </p>
 
         <div className="max-w-5xl mx-auto bg-gray-50 rounded-2xl shadow-xl overflow-hidden border border-gray-100">
@@ -101,7 +100,7 @@ const Portfolio = () => {
                 {/* Impact Section */}
                 <div className="border-t border-gray-200 pt-6 space-y-4 mb-8">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">
-                    Operational Outcomes
+                    Technical Execution Outcomes
                   </h4>
 
                   <div className="grid md:grid-cols-3 gap-4">
