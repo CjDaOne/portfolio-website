@@ -1,65 +1,69 @@
+// src/components/Services.tsx
+
 const Services = () => {
   const services = [
     {
       icon: "fa-search",
-      title: "Discovery & Systems Consultation",
-      price: "Starting at $75",
+      title: "Operational Diagnostic & Systems Blueprinting",
+      price: "Strategic Alignment",
       description:
-        "A focused session to understand your goals, identify workflow challenges, and design the right digital or operational systems to support your needs.",
+        "A deep-dive technical assessment of your current workflow bottlenecks. We map your data paths and design a custom architectural blueprint to eliminate manual drag.",
       features: [
-        "Workflow and needs assessment",
-        "System improvement recommendations",
-        "Actionable roadmap",
+        "Data-flow & bottleneck analysis",
+        "System integration roadmap",
+        "Automation potential reporting",
       ],
     },
     {
-      icon: "fa-code",
-      title: "Custom Software & Web Applications",
-      price: "From $1,000 — project-based",
+      icon: "fa-robot",
+      title: "Lead Capture & Communication Automation",
+      price: "High-ROI Implementation",
       description:
-        "Bespoke digital systems designed to improve productivity, organization, and operational efficiency for individuals and businesses.",
+        "Deploy automated lead capture structures that stop revenue leaks. Includes automated missed-call text-back, centralized inbox routing, and instant text/email follow-ups.",
       features: [
-        "Custom web applications",
-        "Task and workflow systems",
-        "Productivity-focused design",
-        "Deployment & configuration",
-      ],
-    },
-    {
-      icon: "fa-brain",
-      title: "Productivity & Wellness Platform Development",
-      price: "Included in project scope",
-      description:
-        "Structured tools that support focus, routine building, and functional recovery through digital systems and thoughtful UX design.",
-      features: [
-        "Task management systems",
-        "Routine and habit structures",
-        "Wellness-oriented UX design",
-      ],
-    },
-    {
-      icon: "fa-wrench",
-      title: "System Maintenance & Optimization",
-      price: "From $100/month",
-      description:
-        "Ongoing support, updates, and improvements to ensure your systems remain reliable, secure, and effective over time.",
-      features: [
-        "Bug fixes and updates",
-        "Performance improvements",
-        "Feature enhancements",
-        "Priority support access",
+        "Missed-call text-back loops",
+        "Instant multi-channel notifications",
+        "Centralized lead routing panels",
+        "Automated calendar booking links",
       ],
     },
     {
       icon: "fa-server",
-      title: "Digital Infrastructure Setup",
-      price: "Included when required",
+      title: "CRM Architecture & Custom Data Pipelines",
+      price: "Enterprise Structure",
       description:
-        "Technical setup required to support your systems — deployment, hosting configuration, and foundational digital infrastructure.",
+        "Migrate fragmented client tracking into a unified database environment. Custom field mapping, automated pipeline stages, and clean third-party API data syncs.",
       features: [
-        "Deployment setup",
-        "Hosting configuration",
-        "Secure system architecture",
+        "White-labeled CRM deployments",
+        "Custom data fields & pipeline stages",
+        "Cross-platform API pipeline hooks",
+        "Strict secure data handling",
+      ],
+    },
+    {
+      icon: "fa-code",
+      title: "Custom Operational Software Components",
+      price: "Bespoke System Scale",
+      description:
+        "For workflows that off-the-shelf software cannot solve. We develop responsive, secure web tools designed to process custom data intake or proprietary company workflows.",
+      features: [
+        "Custom operational dashboard views",
+        "Offline-resilient data handling",
+        "Bespoke client intake logic models",
+        "Full application hosting deployment",
+      ],
+    },
+    {
+      icon: "fa-shield-alt",
+      title: "Managed Infrastructure & System Optimization",
+      price: "Ongoing Management Plans",
+      description:
+        "Continuous oversight, priority maintenance, and regular refinement of your deployed automation systems to ensure peak operational uptime.",
+      features: [
+        "API webhook monitoring & fixes",
+        "Workflow logic optimization",
+        "Database performance scaling",
+        "Priority technical support access",
       ],
     },
   ];
@@ -68,41 +72,43 @@ const Services = () => {
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-          Systems & Services
+          Managed Systems & Capabilities
         </h2>
 
-        <p className="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
-          We design and build structured digital systems that improve productivity,
-          organization, and long-term operational clarity.
+        <p className="text-xl text-center mb-16 text-gray-600 max-w-3xl mx-auto">
+          We design, build, and deploy automated operational architecture that eliminates 
+          administrative load, secures client tracking, and scales business capacity.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 border-t-4 border-blue-900 flex flex-col"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-blue-900 flex flex-col justify-between"
             >
-              <div className="flex items-center gap-3 mb-3">
-                <span className="bg-blue-100 text-blue-900 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
-                  <i className={`fas ${service.icon}`}></i>
-                </span>
-                <h3 className="text-lg font-semibold text-blue-900 leading-tight">
-                  {service.title}
-                </h3>
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-blue-50 text-blue-900 rounded-lg w-10 h-10 flex items-center justify-center flex-shrink-0 border border-blue-100">
+                    <i className={`fas ${service.icon} text-lg`}></i>
+                  </span>
+                  <h3 className="text-lg font-bold text-gray-900 leading-tight">
+                    {service.title}
+                  </h3>
+                </div>
+
+                <p className="text-sm font-semibold tracking-wider text-blue-700 bg-blue-50 px-2.5 py-1 rounded inline-block mb-4">
+                  {service.price}
+                </p>
+
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                  {service.description}
+                </p>
               </div>
 
-              <p className="text-red-500 font-bold text-lg mb-3">
-                {service.price}
-              </p>
-
-              <p className="text-gray-700 mb-4 leading-relaxed text-sm flex-grow">
-                {service.description}
-              </p>
-
-              <ul className="space-y-2 mt-auto">
+              <ul className="space-y-2.5 border-t border-gray-100 pt-4">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="text-sm text-gray-600 flex items-start">
-                    <span className="text-green-500 mr-2 mt-0.5">✓</span>
+                  <li key={idx} className="text-xs md:text-sm text-gray-700 flex items-start">
+                    <span className="text-red-500 mr-2 font-bold">✓</span>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -111,12 +117,12 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-16 text-center">
           <a
             href="#contact"
-            className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 inline-block"
+            className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-3.5 rounded-lg font-semibold transition duration-300 inline-block shadow-lg hover:shadow-xl text-sm uppercase tracking-wider"
           >
-            Discuss Your Project
+            Initiate System Review
           </a>
         </div>
       </div>
