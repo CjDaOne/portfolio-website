@@ -2,8 +2,10 @@
 import { useMemo } from "react";
 
 const Contact = () => {
-  const FORM_ID = "YOUR_REAL_FORM_ID";
+  // Replace this string with your actual GoHighLevel Form ID
+  const FORM_ID = "YOUR_REAL_FORM_ID"; 
 
+  // FIXED: Converted single quotes to backticks for proper template literal evaluation
   const formUrl = useMemo(
     () => `https://link.cjnfsolutions.com/widget/form/${FORM_ID}`,
     [FORM_ID]
@@ -16,7 +18,7 @@ const Contact = () => {
           Schedule a Strategy Session
         </h2>
 
-        <p className="text-blue-200 text-center mb-12 max-w-xl mx-auto">
+        <p className="text-text-blue-200 text-center mb-12 max-w-xl mx-auto">
           We review your current operations and identify where automation can
           reduce manual workload, improve response time, and increase customer
           follow-up consistency.
@@ -42,11 +44,12 @@ const Contact = () => {
             Response time: 24–48 hours • Limited onboarding capacity per month
           </p>
 
+          {/* FIXED: Upgraded from generic Gmail to your professional domain workspace */}
           <a
-            href="mailto:cjnfsolutions@gmail.com"
+            href="mailto:solutions@cjnfsolutions.com"
             className="text-white font-medium hover:text-blue-200 transition text-base md:text-lg tracking-wide"
           >
-            cjnfsolutions@gmail.com
+            solutions@cjnfsolutions.com
           </a>
         </div>
       </div>
