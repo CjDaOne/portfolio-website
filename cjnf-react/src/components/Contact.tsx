@@ -1,15 +1,27 @@
 // src/components/Contact.tsx
-import { useMemo } from "react";
+import { useEffect } from "react";
 
 const Contact = () => {
-  // Replace this string with your actual GoHighLevel Form ID
-  const FORM_ID = "YOUR_REAL_FORM_ID"; 
+  const FORM_ID = "X3e1f0lDskzFe1tTSznQ";
 
-  // FIXED: Converted single quotes to backticks for proper template literal evaluation
-  const formUrl = useMemo(
-    () => `https://link.cjnfsolutions.com/widget/form/${FORM_ID}`,
-    [FORM_ID]
-  );
+  useEffect(() => {
+    // Dynamically inject the GHL form embed script to ensure proper resizing and tracking
+    const scriptId = "ghl-form-script";
+    let script = document.getElementById(scriptId) as HTMLScriptElement;
+
+    if (!script) {
+      script = document.createElement("script");
+      script.src = "https://link.cjnfsolutions.com/js/form_embed.js";
+      script.id = scriptId;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+    return () => {
+      // Optional cleanup if you want to keep the DOM clean when component unmounts
+      // document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <section id="contact" className="py-20 bg-blue-900 text-white">
@@ -18,7 +30,7 @@ const Contact = () => {
           Schedule a Strategy Session
         </h2>
 
-        <p className="text-text-blue-200 text-center mb-12 max-w-xl mx-auto">
+        <p className="text-blue-200 text-center mb-12 max-w-xl mx-auto">
           We review your current operations and identify where automation can
           reduce manual workload, improve response time, and increase customer
           follow-up consistency.
@@ -27,14 +39,21 @@ const Contact = () => {
         {/* Form Container */}
         <div className="max-w-2xl mx-auto bg-white rounded-xl overflow-hidden shadow-2xl p-6">
           <iframe
-            src={formUrl}
-            style={{ width: "100%", border: "none" }}
+            src={`https://link.cjnfsolutions.com/widget/form/${FORM_ID}`}
+            style={{ width: "100%", height: "100%", minHeight: "600px", border: "none", borderRadius: "8px" }}
             id={`inline-${FORM_ID}`}
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Form 0"
+            data-height="1233"
+            data-layout-iframe-id={`inline-${FORM_ID}`}
             data-form-id={FORM_ID}
             title="Strategy Intake Form"
-            className="w-full min-h-[500px]"
           />
         </div>
 
@@ -44,7 +63,6 @@ const Contact = () => {
             Response time: 24–48 hours • Limited onboarding capacity per month
           </p>
 
-          {/* FIXED: Upgraded from generic Gmail to your professional domain workspace */}
           <a
             href="mailto:solutions@cjnfsolutions.com"
             className="text-white font-medium hover:text-blue-200 transition text-base md:text-lg tracking-wide"
