@@ -39,7 +39,7 @@ const Contact = () => {
         {/* Form Container */}
         <div className="max-w-2xl mx-auto bg-white rounded-xl overflow-hidden shadow-2xl p-6">
           <iframe
-            src={`https://link.cjnfsolutions.com/widget/form/${FORM_ID}`}
+            src={`https://api.leadconnectorhq.com/widget/form/${FORM_ID}`}
             style={{ width: "100%", height: "100%", minHeight: "600px", border: "none", borderRadius: "8px" }}
             id={`inline-${FORM_ID}`}
             data-layout="{'id':'INLINE'}"
