@@ -1,7 +1,29 @@
 // src/components/Contact.tsx
+import { useEffect } from "react";
 
 const Contact = () => {
   const FORM_ID = "X3e1f0lDskzFe1tTSznQ";
+
+  useEffect(() => {
+    // 1. Remove any old instances of the script to prevent duplicates
+    const oldScript = document.getElementById("ghl-form-loader");
+    if (oldScript) oldScript.remove();
+
+    // 2. Create the native GHL form script element
+    const script = document.createElement("script");
+    script.id = "ghl-form-loader";
+    script.src = `https://link.cjnfsolutions.com/js/form_embed.js?id=${FORM_ID}`;
+    script.async = true;
+
+    // 3. Append the script to the body to let it mount natively
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script when navigating away
+      const scriptToRemove = document.getElementById("ghl-form-loader");
+      if (scriptToRemove) scriptToRemove.remove();
+    };
+  }, [FORM_ID]);
 
   return (
     <section id="contact" className="py-20 bg-blue-900 text-white">
@@ -16,17 +38,15 @@ const Contact = () => {
           follow-up consistency.
         </p>
 
-        {/* Form Container */}
-        <div className="max-w-2xl mx-auto bg-white rounded-xl overflow-hidden shadow-2xl p-6">
-          <iframe
-            src={`https://link.cjnfsolutions.com/widget/form/${FORM_ID}`}
-            style={{ width: "100%", minHeight: "750px", border: "none", borderRadius: "8px" }}
-            id={`inline-${FORM_ID}`}
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
+        {/* Target Container for GHL Script Engine */}
+        <div className="max-w-2xl mx-auto bg-white rounded-xl overflow-hidden shadow-2xl p-6 min-h-[600px]">
+          <div 
+            className="ghl-form-target" 
             data-form-id={FORM_ID}
-            title="Website Intake Form"
-          />
+            id={`ghl-${FORM_ID}`}
+          >
+            {/* The native script wrapper will paint the form fields right here directly inside the HTML page layer */}
+          </div>
         </div>
 
         {/* Trust Footer */}
