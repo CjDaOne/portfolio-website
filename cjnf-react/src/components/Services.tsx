@@ -1,130 +1,89 @@
 // src/components/Services.tsx
 
 const Services = () => {
-  const services = [
+  const coreServices = [
     {
-      icon: "fa-search",
-      title: "Operational Diagnostic & Systems Blueprinting",
-      price: "Strategic Alignment",
+      icon: "fa-satellite-dish",
+      title: "Lead Capture & Response Automation",
       description:
-        "A deep-dive technical assessment of your current workflow bottlenecks. We map your data paths and design a custom architectural blueprint to eliminate manual drag.",
-      features: [
-        "Data-flow & bottleneck analysis",
-        "System integration roadmap",
-        "Automation potential reporting",
-      ],
+        "Replace slow, manual inbox tracking with instant response architecture. We deploy automated text-back systems for missed calls and synchronize intake forms to prevent immediate customer churn.",
+      capabilities: ["Missed-call text-back triggers", "Speed-to-lead pipelines", "Centralized SMS/Email hubs"],
     },
     {
-      icon: "fa-robot",
-      title: "Lead Capture & Communication Automation",
-      price: "High-ROI Implementation",
+      icon: "fa-network-wired",
+      title: "Custom Operational Workflows",
       description:
-        "Deploy automated lead capture structures that stop revenue leaks. Includes automated missed-call text-back, centralized inbox routing, and instant text/email follow-ups.",
-      features: [
-        "Missed-call text-back loops",
-        "Instant multi-channel notifications",
-        "Centralized lead routing panels",
-        "Automated calendar booking links",
-      ],
+        "Eliminate the administrative drain caused by disconnected software tools. We bridge your application gaps, engineer automated lead routing sequences, and create repeatable tracking pipelines.",
+      capabilities: ["API credential mapping", "Data intake configuration", "Automated scheduling matrix"],
     },
     {
-      icon: "fa-server",
-      title: "CRM Architecture & Custom Data Pipelines",
-      price: "Enterprise Structure",
+      icon: "fa-heartbeat",
+      title: "Healthcare Operations Engineering",
       description:
-        "Migrate fragmented client tracking into a unified database environment. Custom field mapping, automated pipeline stages, and clean third-party API data syncs.",
-      features: [
-        "White-labeled CRM deployments",
-        "Custom data fields & pipeline stages",
-        "Cross-platform API pipeline hooks",
-        "Strict secure data handling",
-      ],
-    },
-    {
-      icon: "fa-code",
-      title: "Custom Operational Software Components",
-      price: "Bespoke System Scale",
-      description:
-        "For workflows that off-the-shelf software cannot solve. We develop responsive, secure web tools designed to process custom data intake or proprietary company workflows.",
-      features: [
-        "Custom operational dashboard views",
-        "Offline-resilient data handling",
-        "Bespoke client intake logic models",
-        "Full application hosting deployment",
-      ],
-    },
-    {
-      icon: "fa-shield-alt",
-      title: "Managed Infrastructure & System Optimization",
-      price: "Ongoing Management Plans",
-      description:
-        "Continuous oversight, priority maintenance, and regular refinement of your deployed automation systems to ensure peak operational uptime.",
-      features: [
-        "API webhook monitoring & fixes",
-        "Workflow logic optimization",
-        "Database performance scaling",
-        "Priority technical support access",
-      ],
+        "Engineered for care providers transitioning away from fragmented documentation. We build intake workflows, virtual care integration paths, and staff communication panels to streamline clinical oversight.",
+      capabilities: ["Patient intake design", "Caregiver coordination portals", "Structured data staging"],
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section
+      id="services"
+      className="py-20 bg-white"
+    >
       <div className="container mx-auto px-4">
+        
+        {/* Section Header */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-          Managed Systems & Capabilities
+          Operational Infrastructure Architecture
         </h2>
 
         <p className="text-xl text-center mb-16 text-gray-600 max-w-3xl mx-auto">
-          We design, build, and deploy automated operational architecture that eliminates 
-          administrative load, secures client tracking, and scales business capacity.
+          We design, build, and maintain the underlying digital frameworks that 
+          remove manual friction, secure pipeline visibility, and protect your margins.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {services.map((service, index) => (
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {coreServices.map((service, idx) => (
             <div
-              key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-blue-900 flex flex-col justify-between"
+              key={idx}
+              className="bg-white border border-gray-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
             >
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="bg-blue-50 text-blue-900 rounded-lg w-10 h-10 flex items-center justify-center flex-shrink-0 border border-blue-100">
-                    <i className={`fas ${service.icon} text-lg`}></i>
-                  </span>
-                  <h3 className="text-lg font-bold text-gray-900 leading-tight">
-                    {service.title}
-                  </h3>
-                </div>
-
-                <p className="text-sm font-semibold tracking-wider text-blue-700 bg-blue-50 px-2.5 py-1 rounded inline-block mb-4">
-                  {service.price}
-                </p>
-
-                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                  {service.description}
-                </p>
+              {/* Icon Frame */}
+              <div className="w-12 h-12 bg-blue-50 text-blue-900 rounded-lg flex items-center justify-center mb-6 border border-blue-100">
+                <i className={`fas ${service.icon} text-xl`}></i>
               </div>
 
-              <ul className="space-y-2.5 border-t border-gray-100 pt-4">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="text-xs md:text-sm text-gray-700 flex items-start">
-                    <span className="text-red-500 mr-2 font-bold">✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Service Details */}
+              <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                {service.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                {service.description}
+              </p>
+
+              {/* Specific Technical Capabilities Checklist */}
+              <div className="pt-4 border-t border-gray-100">
+                <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
+                  Core Architectural Elements
+                </h4>
+                <ul className="space-y-2">
+                  {service.capabilities.map((cap, capIdx) => (
+                    <li key={capIdx} className="flex items-center text-xs font-medium text-gray-700">
+                      <svg className="w-3.5 h-3.5 text-blue-900 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 5l7 7-7 7" />
+                      </svg>
+                      {cap}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <a
-            href="#contact"
-            className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-3.5 rounded-lg font-semibold transition duration-300 inline-block shadow-lg hover:shadow-xl text-sm uppercase tracking-wider"
-          >
-            Initiate System Review
-          </a>
-        </div>
       </div>
     </section>
   );
