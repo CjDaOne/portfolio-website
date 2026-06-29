@@ -194,9 +194,9 @@ const Contact = () => {
             {/* Footer Rules Legal Links */}
             <div className="text-center pt-2">
               <p className="text-xs text-blue-900 space-x-2 font-medium">
-                <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
+                <a href="/privacy-policy.html" className="hover:underline">Privacy Policy</a>
                 <span className="text-gray-300">|</span>
-                <a href="/terms-of-service" className="hover:underline">Terms of Service</a>
+                <a href="/terms-of-service.html" className="hover:underline">Terms of Service</a>
               </p>
             </div>
 
