@@ -25,8 +25,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle database or serverless API submission payload here
-    console.log('Form Submitted:', formData);
+    console.log('Intake Payload Submitted:', formData);
   };
 
   return (
@@ -35,13 +34,13 @@ const Contact = () => {
       className="py-20 bg-white"
     >
       <div className="container mx-auto px-4">
+        {/* Optimized Structural Labels */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-          Website Intake Form
+          Operations Discovery Profile
         </h2>
 
         <p className="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
-          Provide your operational parameters below to map your optimization landscape 
-          and prepare your foundational discovery profile.
+          Provide your technical parameters below to stage your foundational architecture configuration.
         </p>
 
         {/* Form Container Card */}
@@ -115,7 +114,7 @@ const Contact = () => {
             {/* Operational Bottleneck Dropdown */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-                What is your primary operational bottleneck right now?
+                Primary System Bottleneck
               </label>
               <select
                 name="bottleneck"
@@ -134,7 +133,7 @@ const Contact = () => {
             {/* Estimated Monthly Revenue Dropdown */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-                What is your current estimated monthly revenue?
+                Current Baseline Revenue Volume
               </label>
               <select
                 name="revenue"
@@ -191,7 +190,7 @@ const Contact = () => {
               </button>
             </div>
 
-            {/* Footer Rules Legal Links */}
+            {/* Footer Rules Legal Links - Static Routing Fallbacks */}
             <div className="text-center pt-2">
               <p className="text-xs text-blue-900 space-x-2 font-medium">
                 <a href="/privacy-policy.html" className="hover:underline">Privacy Policy</a>
@@ -208,5 +207,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-           
