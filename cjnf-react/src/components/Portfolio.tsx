@@ -1,101 +1,103 @@
 // src/components/Portfolio.tsx
 
 const Portfolio = () => {
-  const studies = [
+  const deployments = [
     {
-      industry: "Automated Lead Capture",
-      title: "The Missed-Call Revenue Leak",
-      metric: "Sub-60s Response",
-      impact: "Captured 22% more inbound opportunities within 30 days.",
-      breakdown: "Replaced manual voicemail routing with a dead-simple, zero-latency automated SMS fallback loop that triggers the moment a field call goes unanswered."
+      title: "Revenue Recovery & Missed-Call Automation",
+      category: "Operational Systems",
+      description:
+        "An automated communication system engineered to catch missed calls, instantly text back lost leads, and initiate fallback engagement sequences.",
+      metrics: "98% immediate lead engagement within 60 seconds",
+      tags: ["Lead Capture", "SMS Gateways", "Automated Pipelines"],
     },
     {
-      industry: "Database Reactivation",
-      title: "Dormant Pipeline Monetization",
-      metric: "$14k in 72 Hours",
-      impact: "Generated immediate operational cash flow from cold lead blocks.",
-      breakdown: "Deployed structured re-engagement sequence logic across an un-segmented legacy database of 1,200 profiles without manual staff dialing."
+      title: "Unified Staff Coordination & Scheduling Matrix",
+      category: "Workflow Automation",
+      description:
+        "A centralized system eliminating fragmented calendar apps and manual tracking by synchronizing real-time provider schedules and reducing no-shows.",
+      metrics: "40% administrative labor drain reduction",
+      tags: ["Calendar Engines", "Data Staging", "Internal Workflows"],
     },
     {
-      industry: "System Centralization",
-      title: "Multi-Platform Consolidation",
-      metric: "35% Tool Overhead Cut",
-      impact: "Eliminated fragmented subscriptions and data synchronization lag.",
-      breakdown: "Migrated disconnected scheduling software, standalone pipelines, and isolated communication nodes into a single unified infrastructure layer."
+      title: "Patient Intake & Care Coordination Suite",
+      category: "Healthcare Operations",
+      description:
+        "A structured digital staging pipeline designed for smooth patient intake data processing, virtual care documentation, and caregiver communication routing.",
+      metrics: "Eliminated text-clogged manual tracking sheets",
+      tags: ["Intake Engineering", "Data Security Controls", "Asset Portals"],
     },
-    {
-      industry: "Lead Nurture Loops",
-      title: "Immediate Nurture Sequencing",
-      metric: "4x Conversion Spike",
-      impact: "Eliminated manual multi-day follow-up overhead entirely.",
-      breakdown: "Engineered automated conditional messaging logic that tracks user behavior and schedules optimized text/email touches to maximize intake actions."
-    },
-    {
-      industry: "Reputation Engineering",
-      title: "Automated Review Multiplier",
-      metric: "+140% Google Authority",
-      impact: "Scaled local organic search visibility without administrative oversight.",
-      breakdown: "Integrated automated post-fulfillment feedback loops that systematically prompt verified clients for public reviews via SMS immediately after service completion."
-    },
-    {
-      industry: "Scheduling Infrastructure",
-      title: "No-Show Protection System",
-      metric: "Drop Under 4%",
-      impact: "Recovered lost calendar slots and optimized technician velocity.",
-      breakdown: "Deployed a multi-step reminder framework featuring automated confirmation requests, digital calendar links, and responsive cancellation logic triggers."
-    }
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-900 text-white">
+    <section
+      id="portfolio"
+      className="py-20 bg-gray-50 border-t border-b border-gray-100"
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="text-xs font-bold tracking-widest text-blue-400 uppercase block mb-2">
-            Ecosystem Performance Metrics
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Proven Architectural Outcomes
-          </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Verified operational capabilities scaled across our primary white-labeled business automation infrastructure networks.
-          </p>
-        </div>
+        
+        {/* Section Header */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
+          Engineered System Deployments
+        </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {studies.map((study, idx) => (
-            <div 
-              key={idx} 
-              className="bg-gray-800 p-8 rounded-xl border border-gray-700 flex flex-col justify-between hover:border-blue-500/40 transition-all duration-300 shadow-xl group"
+        <p className="text-xl text-center mb-16 text-gray-600 max-w-3xl mx-auto">
+          Review the structural architectures and operational pipelines we deploy 
+          to neutralize manual friction and secure repeatable revenue tracking.
+        </p>
+
+        {/* Deployments Matrix Grid */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {deployments.map((system, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300"
             >
-              <div>
-                <span className="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-3">
-                  {study.industry}
+              {/* Category Indicator Tag */}
+              <div className="px-6 pt-6">
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-900 bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 inline-block">
+                  {system.category}
                 </span>
-                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-blue-300 transition-colors">
-                  {study.title}
+              </div>
+
+              {/* Card Body */}
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight min-h-[3.5rem]">
+                  {system.title}
                 </h3>
-                <div className="text-2xl font-black text-green-400 my-4 tracking-tight">
-                  {study.metric}
+                
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                  {system.description}
+                </p>
+
+                {/* Validation Benchmark Panel */}
+                <div className="bg-gray-50 rounded-lg p-3.5 border border-gray-100 mb-6">
+                  <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+                    System Core Benchmark
+                  </div>
+                  <div className="text-sm font-semibold text-blue-900 flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                    {system.metrics}
+                  </div>
                 </div>
-                <p className="text-sm text-gray-200 font-semibold mb-3 leading-snug">
-                  {study.impact}
-                </p>
-                <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-700/60 pt-4 mt-2">
-                  {study.breakdown}
-                </p>
+
+                {/* Metadata Pill Matrix */}
+                <div className="flex flex-wrap gap-2 pt-2 border-t border-gray-100">
+                  {system.tags.map((tag, tagIdx) => (
+                    <span
+                      key={tagIdx}
+                      className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
         </div>
-        
-        <div className="mt-16 text-center">
-          <a
-            href="#contact"
-            className="bg-red-500 hover:bg-red-600 text-white px-8 py-3.5 rounded-lg font-semibold transition duration-300 inline-block shadow-lg uppercase tracking-wider text-sm"
-          >
-            Deploy This Infrastructure
-          </a>
-        </div>
+
       </div>
     </section>
   );
