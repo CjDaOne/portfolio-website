@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 import { useState } from 'react';
 
 const Header = () => {
@@ -9,7 +8,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
 
-          {/* Logo & Brand Identity */}
+          {/* Logo & Umbrella Brand Identity */}
           <a href="#" className="flex items-center gap-3 group">
             <img
               src="/images/logo no background.png"
@@ -22,13 +21,13 @@ const Header = () => {
             </span>
           </a>
 
-          {/* Desktop Navigation Link Matrix */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul className="flex items-center space-x-6 text-sm font-medium">
               <li><a href="#services" className="hover:text-blue-300 transition">Services</a></li>
-              <li><a href="#portfolio" className="hover:text-blue-300 transition">Systems</a></li>
+              <li><a href="#portfolio" className="hover:text-blue-300 transition">Deployments</a></li>
               <li><a href="#pricing" className="hover:text-blue-300 transition">Pricing</a></li>
-              <li><a href="#contact" className="hover:text-blue-300 transition">Contact</a></li>
+              <li><a href="#contact" className="hover:text-blue-300 transition">Intake</a></li>
               <li>
                 <a
                   href="#contact"
@@ -46,19 +45,18 @@ const Header = () => {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            {/* Font Awesome Icon with standard CSS block fallback layout layout parameters */}
             <i className={`fas ${menuOpen ? 'fa-times' : 'fa-bars'} text-2xl block w-6 h-6 text-center`}></i>
           </button>
         </div>
 
-        {/* Fluid Mobile Menu Layer */}
+        {/* Mobile Dropdown Menu */}
         {menuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-blue-700/60 animate-fadeIn">
+          <nav className="md:hidden mt-4 pb-4 border-t border-blue-700/60">
             <ul className="flex flex-col space-y-4 pt-4 text-base font-medium">
               <li><a href="#services" className="block hover:text-blue-300 transition py-1" onClick={() => setMenuOpen(false)}>Services</a></li>
-              <li><a href="#portfolio" className="block hover:text-blue-300 transition py-1" onClick={() => setMenuOpen(false)}>Systems</a></li>
+              <li><a href="#portfolio" className="block hover:text-blue-300 transition py-1" onClick={() => setMenuOpen(false)}>Deployments</a></li>
               <li><a href="#pricing" className="block hover:text-blue-300 transition py-1" onClick={() => setMenuOpen(false)}>Pricing</a></li>
-              <li><a href="#contact" className="block hover:text-blue-300 transition py-1" onClick={() => setMenuOpen(false)}>Contact</a></li>
+              <li><a href="#contact" className="block hover:text-blue-300 transition py-1" onClick={() => setMenuOpen(false)}>Intake</a></li>
               <li className="pt-2">
                 <a
                   href="#contact"
