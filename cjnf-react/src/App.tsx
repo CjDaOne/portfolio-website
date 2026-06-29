@@ -9,10 +9,8 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-
+    <div className="min-h-screen bg-white text-gray-900 antialiased selection:bg-blue-900 selection:text-white">
       <Header />
-
       <main>
         <Hero />
         <Trust />
@@ -21,9 +19,7 @@ function App() {
         <Pricing />
         <Contact />
       </main>
-
       <Footer />
-
     </div>
   );
 }
