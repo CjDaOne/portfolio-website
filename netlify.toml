@@ -1,4 +1,4 @@
-build]
+[build]
   # Base directory - all commands run from here
   base = "cjnf-react"
   
@@ -27,7 +27,7 @@ build]
   to = "/index.html"
   status = 200
 
-# Security headers
+# Global security headers & CSP
 [[headers]]
   for = "/*"
   [headers.values]
@@ -35,6 +35,20 @@ build]
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Powered-By = ""
+    Content-Security-Policy = """
+    default-src 'self';
+    base-uri 'self';
+    object-src 'none';
+    script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://link.cjnfsolutions.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data: https:;
+    frame-src 'self' https://link.cjnfsolutions.com;
+    connect-src 'self' https://api.github.com https://link.cjnfsolutions.com;
+    frame-ancestors 'none';
+    """
 
 # Cache static assets
 [[headers]]
@@ -47,40 +61,6 @@ build]
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
-
-# CSP (Content Security Policy) - adjust as needed
-Content-Security-Policy = """
-default-src 'self';
-base-uri 'self';
-object-src 'none';
-script-src 'self' 'unsafe-inline'
-https://cdnjs.cloudflare.com
-https://link.cjnfsolutions.com;
-style-src 'self' 'unsafe-inline'
-https://fonts.googleapis.com
-https://cdnjs.cloudflare.com;
-font-src 'self'
-https://fonts.gstatic.com
-https://cdnjs.cloudflare.com;
-img-src 'self' data: https:;
-frame-src 'self'
-https://link.cjnfsolutions.com;
-connect-src 'self'
-https://api.github.com
-https://link.cjnfsolutions.com;
-frame-ancestors 'none';
-"""
-# HSTS (HTTP Strict Transport Security)
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-
-# Remove server header
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Powered-By = ""
 
 # Optimize for SEO and performance
 [build.processing]
@@ -97,7 +77,3 @@ frame-ancestors 'none';
 # Build hooks (optional)
 [build.hooks]
   prebuild = "echo 'Starting build...'"
-
-# Plugins (if needed)
-# [[plugins]]
-#   package = "@netlify/plugin-lighthouse"
