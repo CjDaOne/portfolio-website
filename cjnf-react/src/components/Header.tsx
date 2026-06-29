@@ -12,7 +12,7 @@ const Header = () => {
           {/* Logo & Brand Identity */}
           <a href="#hero" className="flex items-center gap-3 group">
             <img
-              src="/images/logo no background.png"
+              src="/"
               alt="CJNF Systems logo"
               className="h-10 w-auto transition-transform group-hover:scale-105"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
