@@ -1,76 +1,92 @@
-export default function Trust() {
-  const benefits = [
+// src/components/Trust.tsx
+
+const Trust = () => {
+  const pillars = [
     {
-      icon: "🧠",
+      icon: "fa-diagram-project",
       title: "Systems-Focused Design",
       description:
-        "We build around how people actually think and work — not just how software looks on a demo screen.",
+        "We structure frameworks around actual business architecture, ensuring seamless data flow across tracking hubs.",
     },
     {
-      icon: "⚙️",
-      title: "Consultation Before Code",
+      icon: "fa-layer-group",
+      title: "Consolidated Platform Focus",
       description:
-        "Every project starts with understanding your actual workflow. We don't write a line of code until the problem is clear.",
+        "Drive clear execution actions without scattering your team across disconnected tools and messaging apps.",
     },
     {
-      icon: "📊",
-      title: "Function Over Flash",
+      icon: "fa-chart-pie",
+      title: "Functional Client Panels",
       description:
-        "Usability, clarity, and long-term stability take priority. If a feature doesn't serve you, it doesn't ship.",
+        "Complete visibility built straight into clean, lightweight portals designed for active operational metrics.",
     },
     {
-      icon: "🔁",
-      title: "Ongoing Optimization",
+      icon: "fa-sliders",
+      title: "Progress Optimization",
       description:
-        "Systems evolve. We provide support and iteration so your tools stay useful as your needs change.",
+        "Continuous engineering tweaks to ensure systems scale dynamically alongside expanding operations.",
     },
   ];
 
   return (
     <section id="trust" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+        
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             How We Work
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Focused on clarity, structure, and practical tools that improve how work and daily life are managed.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Focused on clarity, efficiency, and real business results that optimize 
+            your workflows and execution metrics.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="text-center p-6 rounded-lg bg-gray-50 hover:bg-blue-50 transition duration-300"
+        {/* 2x2 Pillars Grid */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
+          {pillars.map((pillar, idx) => (
+            <div 
+              key={idx} 
+              className="bg-white border border-gray-100 p-6 rounded-xl shadow-sm flex items-start space-x-4 hover:shadow-md transition-shadow duration-300"
             >
-              <div className="text-4xl mb-3">{benefit.icon}</div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-800">
-                {benefit.title}
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {benefit.description}
-              </p>
+              <div className="w-10 h-10 bg-blue-50 text-blue-900 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-100">
+                <i className={`fas ${pillar.icon} text-lg`}></i>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-base mb-1.5">
+                  {pillar.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {pillar.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* About the founder */}
-        <div className="max-w-3xl mx-auto bg-blue-50 rounded-xl p-8 border-l-4 border-blue-900">
-          <h3 className="text-xl font-bold mb-3 text-gray-800">About CJNF Solutions</h3>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Founded by Carl'averis Jackson, CJNF Solutions builds custom software and workflow
-            systems for individuals and small businesses. The focus is on tools that actually get used
-            — structured, practical, and built around real operational needs rather than trend-chasing.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Services are delivered remotely, with an appointment-driven consultation model that ensures
-            every project starts with a clear understanding of the problem being solved.
-          </p>
+        {/* About Executive Panel */}
+        <div className="max-w-4xl mx-auto bg-blue-50/60 rounded-xl p-8 border border-blue-100/80 shadow-sm">
+          <h3 className="text-lg font-bold text-blue-950 mb-3 tracking-wide">
+            About CJNF Solutions
+          </h3>
+          <div className="space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
+            <p>
+              Founded by Carl'averis Jackson, <strong>CJNF Solutions</strong> builds custom software 
+              architectures and operational automation sequences tailored explicitly for individuals and growing businesses. 
+              We design and deploy systems that target root operational friction—eliminating bloated administration times 
+              and expensive platform subscription packages that drag down profit margins.
+            </p>
+            <p>
+              Instead of relying on rigid, off-the-shelf software models, we focus deeply on creating automated, 
+              repeatable pipeline architecture built around your exact daily production parameters.
+            </p>
+          </div>
         </div>
 
       </div>
     </section>
   );
-}
+};
+
+export default Trust;
