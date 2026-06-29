@@ -10,15 +10,15 @@ const Header = () => {
         <div className="flex justify-between items-center">
 
           {/* Logo & Brand Identity */}
-          <a href="#hero" className="flex items-center gap-3 group">
+          <a href="#" className="flex items-center gap-3 group">
             <img
-              src="/"
-              alt="CJNF Systems logo"
+              src="/images/logo no background.png"
+              alt="CJNF Solutions logo"
               className="h-10 w-auto transition-transform group-hover:scale-105"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
             <span className="text-xl font-bold tracking-wide">
-              CJNF <span className="text-blue-200">SYSTEMS</span>
+              CJNF <span className="text-blue-200">SOLUTIONS</span>
             </span>
           </a>
 
