@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { supabase } from '../lib/supabaseClient'; // Adjust path based on your lib folder directory
+import { supabase } from '../lib/supabaseClient';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,19 +31,21 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Split the full name into first and last for the database schema columns
     const nameParts = formData.fullName.trim().split(' ');
     const firstName = nameParts[0] || '';
     const lastName = nameParts.slice(1).join(' ') || '';
 
+    // Dynamically use an environment variable for the Tenant Context, fallback to default Alpha
+    const targetOrganizationId = import.meta.env.VITE_DEFAULT_ORG_ID || '90499f6d-43ee-4f0d-b097-3da31bacf421';
+
     try {
-      // Invoke the Postgres security definer function via RPC
+      // 1. Write the record to your multi-tenant database layer
       const { error } = await supabase.rpc('submit_public_lead', {
         p_first_name: firstName,
         p_last_name: lastName,
         p_email: formData.email || null,
         p_phone_number: formData.phone,
-        p_organization_id: '90499f6d-43ee-4f0d-b097-3da31bacf421', // Matches active tenant instance
+        p_organization_id: targetOrganizationId,
         p_custom_fields: {
           company_name: formData.companyName,
           primary_bottleneck: formData.bottleneck,
@@ -56,9 +58,32 @@ const Contact = () => {
 
       if (error) throw error;
 
+      // 2. TRIGGER PIPELINE: Synchronize lead entry directly into GoHighLevel Automation Webhook
+      const ghlWebhookUrl = import.meta.env.VITE_GHL_INTAKE_WEBHOOK_URL;
+      
+      if (ghlWebhookUrl) {
+        // Fire-and-forget payload processing securely
+        fetch(ghlWebhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            email: formData.email,
+            phone: formData.phone,
+            companyName: formData.companyName,
+            bottleneck: formData.bottleneck,
+            revenue: formData.revenue,
+            smsConsent: formData.smsConsent,
+            marketingConsent: formData.marketingConsent,
+            organizationId: targetOrganizationId,
+            source: 'CJNF Solutions Master Intake'
+          })
+        }).catch(ghlErr => console.error('GHL Background Pipeline Sync Exception:', ghlErr));
+      }
+
       setSubmitStatus({ success: true, message: 'Operational Profile Submitted Successfully!' });
       
-      // Clear out the form inputs on a successful submission event
       setFormData({
         fullName: '',
         companyName: '',
@@ -82,6 +107,7 @@ const Contact = () => {
   };
 
   return (
+    // ... your existing JSX layout blocks remain identical ...
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Operations Discovery Profile</h2>
