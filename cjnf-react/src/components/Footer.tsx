@@ -8,7 +8,7 @@ const Footer = () => {
             <span className="text-xl font-bold tracking-wide block mb-3">
               CJNF <span className="text-blue-200">SOLUTIONS</span>
             </span>
-            <p className="text-xs text-blue-100/70 leading-relaxed max-w-sm">
+            <p className="text-blue-100/70 text-sm leading-relaxed max-w-sm">
               CJNF Solutions LLC designs, implements, and maintains <strong>CJNF Systems</strong>—our proprietary, managed business software architectures and automated pipelines built for scalable operations.
             </p>
           </div>
@@ -17,7 +17,7 @@ const Footer = () => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-blue-200 mb-3">Navigation</h4>
             <ul className="space-y-2 text-sm text-blue-100/80">
               <li><a href="#services" className="hover:text-white transition">Services</a></li>
-              <li><a href="#portfolio" className="hover:text-white transition">Deployments</a></li>
+              <li><a href="?view=login" className="hover:text-white transition">Client Portal</a></li>
               <li><a href="#pricing" className="hover:text-white transition">Pricing</a></li>
               <li><a href="#contact" className="hover:text-white transition">Discovery Intake</a></li>
             </ul>
@@ -27,7 +27,7 @@ const Footer = () => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-blue-200 mb-3">Contact Information</h4>
             <ul className="space-y-2 text-sm text-blue-100/80">
               <li><a href="mailto:contact@cjnfsolutions.com" className="hover:text-white transition">contact@cjnfsolutions.com</a></li>
-              <li className="text-xs text-blue-100/60 pt-2 leading-normal">
+              <li className="text-blue-100/60 pt-2 leading-normal">
                 Dayton, Ohio<br />
                 Enterprise Consulting & System Architecture
               </li>
