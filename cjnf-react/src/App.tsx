@@ -220,10 +220,13 @@ useEffect(() => {
           </div>
 
           <button 
-            onClick={() => supabase.auth.signOut()}
-            className="px-4 py-2 bg-rose-600 hover:bg-rose-700 rounded-md text-sm font-semibold transition"
-          >
-            Disconnect Session
+            onClick={async () => {
+            setShowApp(false); // Force landing page layout instantly
+            await supabase.auth.signOut();
+            }}
+             className="px-4 py-2 bg-rose-600 hover:bg-rose-700 rounded-md text-sm font-semibold transition"
+              >
+              Disconnect Session
           </button>
         </div>
       </div>
