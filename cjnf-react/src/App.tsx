@@ -40,31 +40,40 @@ function App() {
     return () => subscription.unsubscribe();
   }, []);
 
-  // Manage URL Routing paths and check auth overrides
-  useEffect(() => {
-    const path = window.location.pathname;
-    const searchParams = new URLSearchParams(window.location.search);
-    const viewParam = searchParams.get('view');
+  // Manage URL Routing paths, check auth overrides, and mask URL query parameters
+useEffect(() => {
+  const path = window.location.pathname;
+  const searchParams = new URLSearchParams(window.location.search);
+  const viewParam = searchParams.get('view');
+  
+  // 1. Evaluate entrance flags to toggle the App Console layout layer
+  if (
+    path === '/login' || 
+    viewParam === 'login' || 
+    viewParam === 'dashboard' || 
+    window.location.hash.includes('access_token') || 
+    window.location.search.includes('code')
+  ) {
+    setShowApp(true);
+  } else if (session) {
+    // If they have a valid live session, preserve dashboard layout persistence
+    setShowApp(true);
+  } else {
+    setShowApp(false);
+  }
+
+  // 2. CLEANSING MECHANISM: Once verified inside the console application, clear parameters
+  if ((session || viewParam === 'login') && (window.location.search || window.location.hash)) {
+    // Construct a perfectly clean base URL option without parameters or trailing hashes
+    const cleanUrl = window.location.origin + window.location.pathname;
     
-    // If explicitly navigating via search params, or if URL contains native Supabase auth handlers
-    if (
-      path === '/login' || 
-      viewParam === 'login' || 
-      viewParam === 'dashboard' || 
-      window.location.hash.includes('access_token') || 
-      window.location.search.includes('code')
-    ) {
-      setShowApp(true);
-    } else if (session) {
-      // If logged in, automatically render the tenant dashboard app
-      setShowApp(true);
-    } else {
-      setShowApp(false);
-    }
-  }, [session]);
+    // Replace the browser address string silently without forcing a hard reload framework loop
+    window.history.replaceState({}, document.title, cleanUrl);
+  }
+}, [session]); // Monitored dynamically alongside state session assignments
 
   // ... rest of your existing fetchUserTenantContext, handleCreateOrganization, and layout renders ...
-  
+
   // 2. Fetch the user's explicit multi-tenant profile and organization context
   async function fetchUserTenantContext(userId: string) {
     try {
