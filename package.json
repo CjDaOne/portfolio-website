@@ -2,9 +2,12 @@
   "name": "portfolio-website",
   "private": true,
   "scripts": {
-  "dev": "cd cjnf-react && npm run dev",
-  "build": "cd cjnf-react && npm run build",
-  "lint": "cd cjnf-react && npm run lint",
-  "preview": "cd cjnf-react && npm run preview"
+    "dev": "cd cjnf-react && npm run dev",
+    "build": "cd cjnf-react && npm run build",
+    "lint": "cd cjnf-react && npm run lint",
+    "preview": "cd cjnf-react && npm run preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.110.0"
   }
 }
