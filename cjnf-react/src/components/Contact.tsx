@@ -1,6 +1,10 @@
 import { useState } from 'react';
+import { supabase } from '../lib/supabaseClient'; // Adjust path based on your lib folder directory
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ success: boolean; message: string } | null>(null);
+
   const [formData, setFormData] = useState({
     fullName: '',
     companyName: '',
@@ -22,6 +26,61 @@ const Contact = () => {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // Split the full name into first and last for the database schema columns
+    const nameParts = formData.fullName.trim().split(' ');
+    const firstName = nameParts[0] || '';
+    const lastName = nameParts.slice(1).join(' ') || '';
+
+    try {
+      // Invoke the Postgres security definer function via RPC
+      const { error } = await supabase.rpc('submit_public_lead', {
+        p_first_name: firstName,
+        p_last_name: lastName,
+        p_email: formData.email || null,
+        p_phone_number: formData.phone,
+        p_organization_id: '90499f6d-43ee-4f0d-b097-3da31bacf421', // Matches active tenant instance
+        p_custom_fields: {
+          company_name: formData.companyName,
+          primary_bottleneck: formData.bottleneck,
+          revenue_volume: formData.revenue,
+          sms_consent_given: formData.smsConsent,
+          marketing_consent_given: formData.marketingConsent,
+          submitted_at: new Date().toISOString()
+        }
+      });
+
+      if (error) throw error;
+
+      setSubmitStatus({ success: true, message: 'Operational Profile Submitted Successfully!' });
+      
+      // Clear out the form inputs on a successful submission event
+      setFormData({
+        fullName: '',
+        companyName: '',
+        phone: '',
+        email: '',
+        bottleneck: '',
+        revenue: '',
+        smsConsent: false,
+        marketingConsent: false,
+      });
+
+    } catch (err: any) {
+      console.error('Intake Submission Error:', err);
+      setSubmitStatus({ 
+        success: false, 
+        message: err.message || 'Failed to submit intake configuration profile.' 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -31,12 +90,19 @@ const Contact = () => {
         </p>
 
         <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-10 border border-gray-100">
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
+          
+          {submitStatus && (
+            <div className={`p-4 mb-6 rounded-lg text-sm font-medium ${submitStatus.success ? 'bg-green-50 text-green-800 border border-green-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
+              {submitStatus.message}
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="space-y-6">
             
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1.5">Full Name</label>
-                <input type="text" name="fullName" placeholder="Enter your full name" value={formData.fullName} onChange={handleChange} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-900" />
+                <input type="text" name="fullName" required placeholder="Enter your full name" value={formData.fullName} onChange={handleChange} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-900" />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1.5">Company Name</label>
@@ -93,8 +159,8 @@ const Contact = () => {
             </div>
 
             <div className="pt-2">
-              <button type="submit" className="w-full bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition text-sm md:text-base">
-                Submit Operational Intake Profile
+              <button type="submit" disabled={isSubmitting} className="w-full bg-blue-900 hover:bg-blue-800 disabled:bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition text-sm md:text-base">
+                {isSubmitting ? 'Processing Submission...' : 'Submit Operational Intake Profile'}
               </button>
             </div>
 
